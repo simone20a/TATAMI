@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model>
+    <nodes>
+        <node id="1" type="fungibleTokenNode" x="-25.526158824776275" y="-4.113570453661396">
+            <data><![CDATA[{"label":"Fungible Token","name":"CommunityTokens","symbol":"CCT"}]]></data>
+        </node>
+        <node id="3" type="mintNode" x="386.6764819107299" y="558.17447935407">
+            <data><![CDATA[{"label":"Mint","allTokens":[{"name":"CommunityTokens","type":"Fungible"},{"name":"Beneficiary","type":"Fungible"},{"name":"Coupon","type":"Non-Fungible"}],"nftData":[{"label":"Non-Fungible Token","name":"Coupon","attributes":[{"id":0,"name":"name","type":"String"},{"id":1,"name":"price","type":"Number"}]}],"selectedToken":"CommunityTokens"}]]></data>
+        </node>
+        <node id="4" type="numberNode" x="-37.84046344548673" y="722.2859448165168">
+            <data><![CDATA[{"label":"number","value":"toMint"}]]></data>
+        </node>
+        <node id="5" type="poolNode" x="608.5389648876294" y="-4.9510513709497275">
+            <data><![CDATA[{"label":"Pool","name":"CCT_Pool","keys":[],"allTokens":[{"name":"CommunityTokens","type":"Fungible"},{"name":"Beneficiary","type":"Fungible"},{"name":"Coupon","type":"Non-Fungible"}],"selectedToken":"CommunityTokens","fungibleTokens":[{"name":"CommunityTokens","type":"Fungible"},{"name":"Beneficiary","type":"Fungible"}]}]]></data>
+        </node>
+        <node id="6" type="joinNode" x="828.9356474440499" y="639.1347452243513">
+            <data><![CDATA[{"label":"Join"}]]></data>
+        </node>
+        <node id="7" type="depositNode" x="1205.4802626716614" y="659.7066313405386">
+            <data><![CDATA[{"label":"Deposit","pools":[{"label":"Pool","name":"CCT_Pool","keys":[],"allTokens":[{"name":"CommunityTokens","type":"Fungible"},{"name":"Beneficiary","type":"Fungible"},{"name":"Coupon","type":"Non-Fungible"}],"selectedToken":"CommunityTokens","fungibleTokens":[{"name":"CommunityTokens","type":"Fungible"},{"name":"Beneficiary","type":"Fungible"}],"tokenType":"Fungible"},{"label":"Pool","name":"CouponPool","keys":[],"allTokens":[{"name":"CommunityTokens","type":"Fungible"},{"name":"Beneficiary","type":"Fungible"},{"name":"Coupon","type":"Non-Fungible"}],"selectedToken":"Coupon","tokenType":"Non-Fungible"}],"selectedPool":"CCT_Pool"}]]></data>
+        </node>
+        <node id="9" type="entryNode" x="-98.84290864226631" y="1284.3028701415396">
+            <data><![CDATA[{"label":"Entry","name":"assignBeneficiary","tokenSelections":[{"id":0,"selectedToken":"Beneficiary"}],"tokens":["CommunityTokens","Beneficiary","Coupon"]}]]></data>
+        </node>
+        <node id="10" type="mintNode" x="781.3383676896414" y="1386.6541257210213">
+            <data><![CDATA[{"label":"Mint","allTokens":[{"name":"CommunityTokens","type":"Fungible"},{"name":"Beneficiary","type":"Fungible"},{"name":"Coupon","type":"Non-Fungible"}],"nftData":[{"label":"Non-Fungible Token","name":"Coupon","attributes":[{"id":0,"name":"name","type":"String"},{"id":1,"name":"price","type":"Number"}]}],"selectedToken":"Beneficiary"}]]></data>
+        </node>
+        <node id="11" type="joinNode" x="1204.8861268563123" y="1465.8557751187145">
+            <data><![CDATA[{"label":"Join"}]]></data>
+        </node>
+        <node id="12" type="transferNode" x="1636.9627939276022" y="1485.9388063670365">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="13" type="addressNode" x="1239.4412234975432" y="1669.3600087519956">
+            <data><![CDATA[{"label":"address","value":"sendBeneficiary"}]]></data>
+        </node>
+        <node id="14" type="entryNode" x="-121.12939049822035" y="1903.3217657728037">
+            <data><![CDATA[{"label":"Entry","name":"withdrawCCT","tokenSelections":[{"id":0,"selectedToken":"Beneficiary"}],"tokens":["CommunityTokens","Beneficiary","Coupon"]}]]></data>
+        </node>
+        <node id="15" type="withdrawNode" x="338.5102742126122" y="2003.40398951614">
+            <data><![CDATA[{"label":"Withdraw","pools":[{"label":"Pool","name":"CCT_Pool","keys":[],"allTokens":[{"name":"CommunityTokens","type":"Fungible"},{"name":"Beneficiary","type":"Fungible"},{"name":"Coupon","type":"Non-Fungible"}],"selectedToken":"CommunityTokens","fungibleTokens":[{"name":"CommunityTokens","type":"Fungible"},{"name":"Beneficiary","type":"Fungible"}],"tokenType":"Fungible"},{"label":"Pool","name":"CouponPool","keys":[],"allTokens":[{"name":"CommunityTokens","type":"Fungible"},{"name":"Beneficiary","type":"Fungible"},{"name":"Coupon","type":"Non-Fungible"}],"selectedToken":"Coupon","tokenType":"Non-Fungible"}],"selectedPool":"CCT_Pool"}]]></data>
+        </node>
+        <node id="16" type="numberNode" x="-58.04710112211525" y="2169.0145285507892">
+            <data><![CDATA[{"label":"number","value":"CCT_Pool_amount / Beneficiary_TotalSupply"}]]></data>
+        </node>
+        <node id="17" type="fungibleTokenNode" x="289.0432818205197" y="-4.324874375988486">
+            <data><![CDATA[{"label":"Fungible Token","name":"Beneficiary","symbol":"BEN"}]]></data>
+        </node>
+        <node id="18" type="numberNode" x="399.36134795035576" y="1512.0090180303578">
+            <data><![CDATA[{"label":"number","value":"1"}]]></data>
+        </node>
+        <node id="19" type="ifNode" x="366.62140395980316" y="1345.745801222278">
+            <data><![CDATA[{"label":"If"}]]></data>
+        </node>
+        <node id="20" type="booleanNode" x="-37.49644397403085" y="1157.489373995525">
+            <data><![CDATA[{"label":"boolean","value":"Beneficiary_TotalSupply(Sender) >= 1"}]]></data>
+        </node>
+        <node id="21" type="exceptionNode" x="781.9503566605559" y="1256.577674852193">
+            <data><![CDATA[{"label":"Exception"}]]></data>
+        </node>
+        <node id="22" type="burnNode" x="799.0188453499707" y="1998.091935628">
+            <data><![CDATA[{"label":"Burn"}]]></data>
+        </node>
+        <node id="23" type="transferNode" x="801.3050364535966" y="2124.9240897624823">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="24" type="addressNode" x="374.4477265202669" y="2255.2106394291304">
+            <data><![CDATA[{"label":"address","value":"Sender"}]]></data>
+        </node>
+        <node id="25" type="entryNode" x="-102.20644432081838" y="455.79062930025754">
+            <data><![CDATA[{"label":"Entry","name":"mintCCT","tokenSelections":[{"id":0,"selectedToken":"CommunityTokens"}],"tokens":["CommunityTokens","Beneficiary","Coupon"]}]]></data>
+        </node>
+        <node id="29" type="numberNode" x="-426.545450107106" y="1424.3332802818895">
+            <data><![CDATA[{"label":"number","value":"0"}]]></data>
+        </node>
+        <node id="30" type="numberNode" x="-423.8136471707886" y="595.691100930443">
+            <data><![CDATA[{"label":"number","value":"0"}]]></data>
+        </node>
+        <node id="31" type="numberNode" x="-450.73406560912736" y="2043.3644898980247">
+            <data><![CDATA[{"label":"number","value":"1"}]]></data>
+        </node>
+        <node id="33" type="entryNode" x="-123.26444565135755" y="2717.0323138593753">
+            <data><![CDATA[{"label":"Entry","name":"mintCoupon","tokenSelections":[{"id":0,"selectedToken":"CommunityTokens"}],"tokens":["CommunityTokens","Beneficiary","Coupon"]}]]></data>
+        </node>
+        <node id="34" type="nonFungibleTokenNode" x="941.5323267312776" y="-5.786827721591997">
+            <data><![CDATA[{"label":"Non-Fungible Token","name":"Coupon","attributes":[{"id":0,"name":"name","type":"String"},{"id":1,"name":"price","type":"Number"}]}]]></data>
+        </node>
+        <node id="35" type="entryNode" x="-122.11457157517452" y="3435.556405745849">
+            <data><![CDATA[{"label":"Entry","name":"buyCoupon","tokenSelections":[{"id":0,"selectedToken":"CommunityTokens"}],"tokens":["CommunityTokens","Beneficiary","Coupon"]}]]></data>
+        </node>
+        <node id="36" type="poolNode" x="1271.1143641592375" y="-5.115210987871478">
+            <data><![CDATA[{"label":"Pool","name":"CouponPool","keys":[],"allTokens":[{"name":"CommunityTokens","type":"Fungible"},{"name":"Beneficiary","type":"Fungible"},{"name":"Coupon","type":"Non-Fungible"}],"selectedToken":"Coupon"}]]></data>
+        </node>
+        <node id="37" type="numberNode" x="-458.2942122963158" y="2855.841253365355">
+            <data><![CDATA[{"label":"number","value":"0"}]]></data>
+        </node>
+        <node id="38" type="mintNode" x="328.8456689554486" y="2819.980909360923">
+            <data><![CDATA[{"label":"Mint","allTokens":[{"name":"CommunityTokens","type":"Fungible"},{"name":"Beneficiary","type":"Fungible"},{"name":"Coupon","type":"Non-Fungible"}],"nftData":[{"label":"Non-Fungible Token","name":"Coupon","attributes":[{"id":0,"name":"name","type":"String"},{"id":1,"name":"price","type":"Number"}]}],"selectedToken":"Coupon"}]]></data>
+        </node>
+        <node id="39" type="stringNode" x="-65.53806367634337" y="2983.913910524042">
+            <data><![CDATA[{"label":"string","value":"couponName"}]]></data>
+        </node>
+        <node id="40" type="numberNode" x="-63.83042824756086" y="3110.2789322539456">
+            <data><![CDATA[{"label":"number","value":"couponPrice"}]]></data>
+        </node>
+        <node id="41" type="burnNode" x="738.5176612653501" y="2889.823046871202">
+            <data><![CDATA[{"label":"Burn"}]]></data>
+        </node>
+        <node id="42" type="depositNode" x="740.2830672579315" y="3036.3517442554503">
+            <data><![CDATA[{"label":"Deposit","pools":[{"label":"Pool","name":"CCT_Pool","keys":[],"allTokens":[{"name":"CommunityTokens","type":"Fungible"},{"name":"Beneficiary","type":"Fungible"},{"name":"Coupon","type":"Non-Fungible"}],"selectedToken":"CommunityTokens","fungibleTokens":[{"name":"CommunityTokens","type":"Fungible"},{"name":"Beneficiary","type":"Fungible"}],"tokenType":"Fungible"},{"label":"Pool","name":"CouponPool","keys":[],"allTokens":[{"name":"CommunityTokens","type":"Fungible"},{"name":"Beneficiary","type":"Fungible"},{"name":"Coupon","type":"Non-Fungible"}],"selectedToken":"Coupon","tokenType":"Non-Fungible"}],"selectedPool":"CouponPool"}]]></data>
+        </node>
+        <node id="43" type="numberNode" x="-447.9634286233695" y="3575.027493328114">
+            <data><![CDATA[{"label":"number","value":"CCTtoSend"}]]></data>
+        </node>
+        <node id="44" type="ifNode" x="586.0365713766305" y="3495.027493328114">
+            <data><![CDATA[{"label":"If"}]]></data>
+        </node>
+        <node id="45" type="booleanNode" x="258.0365713766305" y="3469.027493328114">
+            <data><![CDATA[{"label":"boolean","value":"CCTtoSend == Coupon_price(couponId)"}]]></data>
+        </node>
+        <node id="46" type="exceptionNode" x="999.3223356747512" y="3748.953679944047">
+            <data><![CDATA[{"label":"Exception"}]]></data>
+        </node>
+        <node id="47" type="withdrawNode" x="1377.772248460484" y="3494.7086188068133">
+            <data><![CDATA[{"label":"Withdraw","pools":[{"label":"Pool","name":"CCT_Pool","keys":[],"allTokens":[{"name":"CommunityTokens","type":"Fungible"},{"name":"Beneficiary","type":"Fungible"},{"name":"Coupon","type":"Non-Fungible"}],"selectedToken":"CommunityTokens","fungibleTokens":[{"name":"CommunityTokens","type":"Fungible"},{"name":"Beneficiary","type":"Fungible"}],"tokenType":"Fungible"},{"label":"Pool","name":"CouponPool","keys":[],"allTokens":[{"name":"CommunityTokens","type":"Fungible"},{"name":"Beneficiary","type":"Fungible"},{"name":"Coupon","type":"Non-Fungible"}],"selectedToken":"Coupon","tokenType":"Non-Fungible"}],"selectedPool":"CouponPool"}]]></data>
+        </node>
+        <node id="49" type="burnNode" x="1928.9129934429395" y="3505.155937845953">
+            <data><![CDATA[{"label":"Burn"}]]></data>
+        </node>
+        <node id="50" type="transferNode" x="1929.841228007967" y="3651.8457148883494">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="51" type="addressNode" x="1409.3058117609064" y="3750.7778846429082">
+            <data><![CDATA[{"label":"address","value":"Sender"}]]></data>
+        </node>
+        <node id="52" type="numberNode" x="1021.7735078558258" y="3605.5834261112277">
+            <data><![CDATA[{"label":"number","value":"couponId"}]]></data>
+        </node>
+    </nodes>
+    <edges>
+        <edge id="reactflow__edge-4number-3number-quantity" source="4" target="3" sourceHandle="number" targetHandle="number-quantity"/>
+        <edge id="reactflow__edge-3output-6input1" source="3" target="6" sourceHandle="output" targetHandle="input1"/>
+        <edge id="reactflow__edge-3minted-output-6input2" source="3" target="6" sourceHandle="minted-output" targetHandle="input2"/>
+        <edge id="reactflow__edge-6output-7input-stream" source="6" target="7" sourceHandle="output" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-10output-11input1" source="10" target="11" sourceHandle="output" targetHandle="input1"/>
+        <edge id="reactflow__edge-10minted-output-11input2" source="10" target="11" sourceHandle="minted-output" targetHandle="input2"/>
+        <edge id="reactflow__edge-11output-12input-stream" source="11" target="12" sourceHandle="output" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-13address-12address-recipient" source="13" target="12" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-14output-stream-0-15input-stream" source="14" target="15" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-16number-15number-amount" source="16" target="15" sourceHandle="number" targetHandle="number-amount"/>
+        <edge id="reactflow__edge-9output-stream-0-19input-stream" source="9" target="19" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-20boolean-19boolean-condition" source="20" target="19" sourceHandle="boolean" targetHandle="boolean-condition"/>
+        <edge id="reactflow__edge-18number-10number-quantity" source="18" target="10" sourceHandle="number" targetHandle="number-quantity"/>
+        <edge id="reactflow__edge-19else-10input-stream" source="19" target="10" sourceHandle="else" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-19then-21input-stream" source="19" target="21" sourceHandle="then" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-15output-stream-22to-burn" source="15" target="22" sourceHandle="output-stream" targetHandle="to-burn"/>
+        <edge id="reactflow__edge-15withdrawn-stream-23input-stream" source="15" target="23" sourceHandle="withdrawn-stream" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-24address-23address-recipient" source="24" target="23" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-25output-stream-0-3input-stream" source="25" target="3" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-29number-9number-quantity-0" source="29" target="9" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-30number-25number-quantity-0" source="30" target="25" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-31number-14number-quantity-0" source="31" target="14" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-37number-33number-quantity-0" source="37" target="33" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-33output-stream-0-38input-stream" source="33" target="38" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-39string-38string-name-0" source="39" target="38" sourceHandle="string" targetHandle="string-name-0"/>
+        <edge id="reactflow__edge-40number-38number-price-1" source="40" target="38" sourceHandle="number" targetHandle="number-price-1"/>
+        <edge id="reactflow__edge-38output-41to-burn" source="38" target="41" sourceHandle="output" targetHandle="to-burn"/>
+        <edge id="reactflow__edge-38minted-output-42input-stream" source="38" target="42" sourceHandle="minted-output" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-43number-35number-quantity-0" source="43" target="35" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-35output-stream-0-44input-stream" source="35" target="44" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-45boolean-44boolean-condition" source="45" target="44" sourceHandle="boolean" targetHandle="boolean-condition"/>
+        <edge id="reactflow__edge-44else-46input-stream" source="44" target="46" sourceHandle="else" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-44then-47input-stream" source="44" target="47" sourceHandle="then" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-47output-stream-49to-burn" source="47" target="49" sourceHandle="output-stream" targetHandle="to-burn"/>
+        <edge id="reactflow__edge-47withdrawn-stream-50input-stream" source="47" target="50" sourceHandle="withdrawn-stream" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-51address-50address-recipient" source="51" target="50" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-52number-47number-id" source="52" target="47" sourceHandle="number" targetHandle="number-id"/>
+    </edges>
+    <variables>
+        <variable id="global-sender" name="Sender" type="Address" scope="state"/>
+        <variable id="global-blocknumber" name="BlockNumber" type="Number" scope="state"/>
+        <variable id="4db8d973-39c5-428e-b2e6-f85c5e32eeb2" name="toMint" type="Number" scope="input"/>
+        <variable id="064e2947-c6ec-43d1-b973-ab68c1fd6807" name="sendBeneficiary" type="Address" scope="input"/>
+        <variable id="a2a2e58b-051b-4254-8144-8b18cbe66986" name="refreshmentPoint" type="Address" scope="input"/>
+        <variable id="a5214911-202a-4bf5-820e-065ce62c5340" name="CCTtoSend" type="Number" scope="input"/>
+        <variable id="ae8508ed-2665-4de4-a0e9-c613247c7006" name="couponName" type="String" scope="input"/>
+        <variable id="99dea39a-7f6a-4bd3-9113-3deda7fdba1f" name="couponPrice" type="Number" scope="input"/>
+        <variable id="3a094fe0-1d5c-4e57-9234-1e1dde5cf6a9" name="couponId" type="Number" scope="input"/>
+        <variable id="state-var-ts-1" name="CommunityTokens_TotalSupply" type="Number" scope="state"/>
+        <variable id="state-var-bof-1" name="CommunityTokens_balanceOf" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Address&quot;}"/>
+        <variable id="state-var-ts-17" name="Beneficiary_TotalSupply" type="Number" scope="state"/>
+        <variable id="state-var-bof-17" name="Beneficiary_balanceOf" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Address&quot;}"/>
+        <variable id="state-var-attr-34-0" name="Coupon_name" type="String" scope="state" metadata="{&quot;inputType&quot;:&quot;Number&quot;}"/>
+        <variable id="state-var-attr-34-1" name="Coupon_price" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Number&quot;}"/>
+        <variable id="state-var-amount-5" name="CCT_Pool_amount" type="Number" scope="state"/>
+        <variable id="state-var-amount-36" name="CouponPool_amount" type="Number" scope="state"/>
+    </variables>
+</model>

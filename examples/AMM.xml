@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model>
+    <nodes>
+        <node id="1" type="fungibleTokenNode" x="307.9327095528122" y="-477.3532152223924">
+            <data><![CDATA[{"label":"Fungible Token","name":"MyToken1","symbol":"T1"}]]></data>
+        </node>
+        <node id="2" type="fungibleTokenNode" x="638.2073735826045" y="-476.2347495864492">
+            <data><![CDATA[{"label":"Fungible Token","name":"MyToken2","symbol":"T2"}]]></data>
+        </node>
+        <node id="3" type="entryNode" x="441.1031927582102" y="884.2679920141929">
+            <data><![CDATA[{"label":"Entry","name":"deposit","tokenSelections":[{"id":0,"selectedToken":"MyToken1"},{"id":1,"selectedToken":"MyToken2"}],"tokens":["MyToken1","MyToken2","LiquidityPoolToken"]}]]></data>
+        </node>
+        <node id="4" type="numberNode" x="32.43551389875756" y="1016.3000304473088">
+            <data><![CDATA[{"label":"number","value":"t1_amount"}]]></data>
+        </node>
+        <node id="5" type="numberNode" x="30.12213753094693" y="1147.4389133895534">
+            <data><![CDATA[{"label":"number","value":"t2_amount"}]]></data>
+        </node>
+        <node id="9" type="fungibleTokenNode" x="965.557817899715" y="-475.38122391337913">
+            <data><![CDATA[{"label":"Fungible Token","name":"LiquidityPoolToken","symbol":"MTK"}]]></data>
+        </node>
+        <node id="10" type="ifNode" x="1086.2124850912417" y="786.6915168856793">
+            <data><![CDATA[{"label":"If"}]]></data>
+        </node>
+        <node id="11" type="booleanNode" x="717.5578178997152" y="604.6187760866209">
+            <data><![CDATA[{"label":"boolean","value":"ever_deposited"}]]></data>
+        </node>
+        <node id="12" type="setNode" x="1928.8449229773773" y="550.9365265962548">
+            <data><![CDATA[{"label":"Set","variables":[{"id":"86c471fd-a0a2-4069-b83c-d30b0335f19a","name":"ever_deposited","type":"Boolean","scope":"variable","value":"false","isDeletable":true},{"id":"ff42ea6d-48c3-41b1-ad77-9eb64d1301a4","name":"to_mint","type":"Number","scope":"variable","value":"0","isDeletable":true}],"selectedVariable":"to_mint"}]]></data>
+        </node>
+        <node id="13" type="numberNode" x="1509.631557185478" y="401.5543274884287">
+            <data><![CDATA[{"label":"number","value":"( t1_amount * LiquidityPoolToken_TotalSupply ) / t1_pool_amount"}]]></data>
+        </node>
+        <node id="14" type="poolNode" x="1464.4314281380482" y="-475.00431137447094">
+            <data><![CDATA[{"label":"Pool","name":"t1_pool","keys":[],"fungibleTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}],"selectedToken":"MyToken1","allTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}]}]]></data>
+        </node>
+        <node id="15" type="poolNode" x="1794.4759739364779" y="-474.75784367021004">
+            <data><![CDATA[{"label":"Pool","name":"t2_pool","keys":[],"fungibleTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}],"selectedToken":"MyToken2","allTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}]}]]></data>
+        </node>
+        <node id="16" type="mintNode" x="2807.5426470725474" y="821.0022883056171">
+            <data><![CDATA[{"label":"Mint","allTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}],"nftData":[],"selectedToken":"LiquidityPoolToken"}]]></data>
+        </node>
+        <node id="17" type="numberNode" x="2436.511416493123" y="992.7267836427009">
+            <data><![CDATA[{"label":"number","value":"to_mint"}]]></data>
+        </node>
+        <node id="18" type="depositNode" x="3227.942685888968" y="832.1579559974964">
+            <data><![CDATA[{"label":"Deposit","pools":[{"label":"Pool","name":"t1_pool","keys":[],"fungibleTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}],"selectedToken":"MyToken1","tokenType":"Fungible"},{"label":"Pool","name":"t2_pool","keys":[],"fungibleTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}],"selectedToken":"MyToken2","tokenType":"Fungible"}],"selectedPool":"t1_pool"}]]></data>
+        </node>
+        <node id="19" type="transferNode" x="3227.942685888968" y="998.1579559974964">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="20" type="addressNode" x="2851.942685888968" y="1100.1579559974964">
+            <data><![CDATA[{"label":"address","value":"Sender"}]]></data>
+        </node>
+        <node id="21" type="setNode" x="1547.3908747586206" y="960.5699222602045">
+            <data><![CDATA[{"label":"Set","variables":[{"id":"86c471fd-a0a2-4069-b83c-d30b0335f19a","name":"ever_deposited","type":"Boolean","scope":"variable","value":"false","isDeletable":true},{"id":"ff42ea6d-48c3-41b1-ad77-9eb64d1301a4","name":"to_mint","type":"Number","scope":"variable","value":"0","isDeletable":true}],"selectedVariable":"to_mint"}]]></data>
+        </node>
+        <node id="22" type="numberNode" x="1172.1356431899844" y="1078.184108569374">
+            <data><![CDATA[{"label":"number","value":"t1_amount"}]]></data>
+        </node>
+        <node id="23" type="setNode" x="1936.9217596144235" y="980.9425587538942">
+            <data><![CDATA[{"label":"Set","variables":[{"id":"86c471fd-a0a2-4069-b83c-d30b0335f19a","name":"ever_deposited","type":"Boolean","scope":"variable","value":"false","isDeletable":true},{"id":"ff42ea6d-48c3-41b1-ad77-9eb64d1301a4","name":"to_mint","type":"Number","scope":"variable","value":"0","isDeletable":true}],"selectedVariable":"ever_deposited"}]]></data>
+        </node>
+        <node id="24" type="booleanNode" x="1571.570049395279" y="1224.5738897275087">
+            <data><![CDATA[{"label":"boolean","value":"true"}]]></data>
+        </node>
+        <node id="26" type="depositNode" x="1087.9426858889678" y="1280.1579559974964">
+            <data><![CDATA[{"label":"Deposit","pools":[{"label":"Pool","name":"t1_pool","keys":[],"fungibleTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}],"selectedToken":"MyToken1","tokenType":"Fungible"},{"label":"Pool","name":"t2_pool","keys":[],"fungibleTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}],"selectedToken":"MyToken2","tokenType":"Fungible"}],"selectedPool":"t2_pool"}]]></data>
+        </node>
+        <node id="27" type="entryNode" x="364.94268588896784" y="1825.1579559974964">
+            <data><![CDATA[{"label":"Entry","name":"redeem","tokenSelections":[{"id":0,"selectedToken":"LiquidityPoolToken"}],"tokens":["MyToken1","MyToken2","LiquidityPoolToken"]}]]></data>
+        </node>
+        <node id="28" type="numberNode" x="7.633947440393101" y="1964.8944895781333">
+            <data><![CDATA[{"label":"number","value":"to_redeem"}]]></data>
+        </node>
+        <node id="29" type="withdrawNode" x="797.123695300895" y="1905.0728531072896">
+            <data><![CDATA[{"label":"Withdraw","pools":[{"label":"Pool","name":"t1_pool","keys":[],"fungibleTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}],"selectedToken":"MyToken1","tokenType":"Fungible"},{"label":"Pool","name":"t2_pool","keys":[],"fungibleTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}],"selectedToken":"MyToken2","tokenType":"Fungible"}],"selectedPool":"t1_pool"}]]></data>
+        </node>
+        <node id="30" type="numberNode" x="430.54452264443637" y="2102.93562309873">
+            <data><![CDATA[{"label":"number","value":"( to_redeem * t1_pool_amount ) / LiquidityPoolToken_TotalSupply"}]]></data>
+        </node>
+        <node id="31" type="withdrawNode" x="1535.5758766788097" y="2003.8305490376224">
+            <data><![CDATA[{"label":"Withdraw","pools":[{"label":"Pool","name":"t1_pool","keys":[],"fungibleTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}],"selectedToken":"MyToken1","tokenType":"Fungible"},{"label":"Pool","name":"t2_pool","keys":[],"fungibleTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}],"selectedToken":"MyToken2","tokenType":"Fungible"}],"selectedPool":"t2_pool"}]]></data>
+        </node>
+        <node id="32" type="numberNode" x="1203.0917943266911" y="1933.2144607504467">
+            <data><![CDATA[{"label":"number","value":"( to_redeem * t2_pool_amount ) / LiquidityPoolToken_TotalSupply"}]]></data>
+        </node>
+        <node id="33" type="transferNode" x="1211.2608970666622" y="2141.0687755802605">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="34" type="addressNode" x="848.3521479616433" y="2179.8260206303107">
+            <data><![CDATA[{"label":"address","value":"Sender"}]]></data>
+        </node>
+        <node id="35" type="transferNode" x="1994.627031866169" y="2164.5580150045334">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="36" type="addressNode" x="1568.297336315613" y="2271.434054384976">
+            <data><![CDATA[{"label":"address","value":"Sender"}]]></data>
+        </node>
+        <node id="37" type="burnNode" x="1996.9759558085966" y="2025.9715024013224">
+            <data><![CDATA[{"label":"Burn"}]]></data>
+        </node>
+        <node id="38" type="entryNode" x="373.43984791303546" y="2561.4132343678007">
+            <data><![CDATA[{"label":"Entry","name":"swap_t1_t2","tokenSelections":[{"id":0,"selectedToken":"MyToken1"}],"tokens":["MyToken1","MyToken2","LiquidityPoolToken"]}]]></data>
+        </node>
+        <node id="39" type="numberNode" x="52.70893732052622" y="2701.495429795781">
+            <data><![CDATA[{"label":"number","value":"t1_amount"}]]></data>
+        </node>
+        <node id="40" type="withdrawNode" x="865.5417021322231" y="2663.9757887697015">
+            <data><![CDATA[{"label":"Withdraw","pools":[{"label":"Pool","name":"t1_pool","keys":[],"fungibleTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}],"selectedToken":"MyToken1","tokenType":"Fungible"},{"label":"Pool","name":"t2_pool","keys":[],"fungibleTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}],"selectedToken":"MyToken2","tokenType":"Fungible"}],"selectedPool":"t2_pool"}]]></data>
+        </node>
+        <node id="41" type="numberNode" x="437.5417021322231" y="2859.9757887697015">
+            <data><![CDATA[{"label":"number","value":"t1_amount * t2_pool_amount / ( t1_pool_amount + t1_amount )"}]]></data>
+        </node>
+        <node id="42" type="transferNode" x="1324.0405277028826" y="2856.3093757356623">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="43" type="addressNode" x="896.541272059507" y="2938.6425657114232">
+            <data><![CDATA[{"label":"address","value":"Sender"}]]></data>
+        </node>
+        <node id="44" type="depositNode" x="1314.540544244141" y="2636.7542024669656">
+            <data><![CDATA[{"label":"Deposit","pools":[{"label":"Pool","name":"t1_pool","keys":[],"fungibleTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}],"selectedToken":"MyToken1","tokenType":"Fungible"},{"label":"Pool","name":"t2_pool","keys":[],"fungibleTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}],"selectedToken":"MyToken2","tokenType":"Fungible"}],"selectedPool":"t1_pool"}]]></data>
+        </node>
+        <node id="45" type="entryNode" x="389.1006399959549" y="3348.3247728676356">
+            <data><![CDATA[{"label":"Entry","name":"swap_t2_t1","tokenSelections":[{"id":0,"selectedToken":"MyToken2"}],"tokens":["MyToken1","MyToken2","LiquidityPoolToken"]}]]></data>
+        </node>
+        <node id="46" type="numberNode" x="45.63936158461115" y="3486.671330866515">
+            <data><![CDATA[{"label":"number","value":"t2_amount"}]]></data>
+        </node>
+        <node id="47" type="withdrawNode" x="882.03264933134" y="3446.465874609835">
+            <data><![CDATA[{"label":"Withdraw","pools":[{"label":"Pool","name":"t1_pool","keys":[],"fungibleTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}],"selectedToken":"MyToken1","tokenType":"Fungible"},{"label":"Pool","name":"t2_pool","keys":[],"fungibleTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}],"selectedToken":"MyToken2","tokenType":"Fungible"}],"selectedPool":"t1_pool"}]]></data>
+        </node>
+        <node id="48" type="numberNode" x="462.03264933134005" y="3650.465874609835">
+            <data><![CDATA[{"label":"number","value":"t2_amount * t1_pool_amount / ( t2_pool_amount + t2_amount )"}]]></data>
+        </node>
+        <node id="49" type="transferNode" x="1310.0828424925296" y="3634.1494541425755">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="50" type="addressNode" x="915.2190943827507" y="3727.7885715514662">
+            <data><![CDATA[{"label":"address","value":"Sender"}]]></data>
+        </node>
+        <node id="51" type="depositNode" x="1312.3392067674429" y="3442.3584907749687">
+            <data><![CDATA[{"label":"Deposit","pools":[{"label":"Pool","name":"t1_pool","keys":[],"fungibleTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}],"selectedToken":"MyToken1","tokenType":"Fungible"},{"label":"Pool","name":"t2_pool","keys":[],"fungibleTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}],"selectedToken":"MyToken2","tokenType":"Fungible"}],"selectedPool":"t2_pool"}]]></data>
+        </node>
+        <node id="52" type="entryNode" x="402.99929808000525" y="4146.663079331598">
+            <data><![CDATA[{"label":"Entry","name":"mint_t1","tokenSelections":[{"id":0,"selectedToken":"MyToken1"}],"tokens":["MyToken1","MyToken2","LiquidityPoolToken"]}]]></data>
+        </node>
+        <node id="53" type="numberNode" x="36.05521100627533" y="4286.784142351771">
+            <data><![CDATA[{"label":"number","value":"0"}]]></data>
+        </node>
+        <node id="54" type="mintNode" x="901.711182164714" y="4248.587411713588">
+            <data><![CDATA[{"label":"Mint","allTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}],"nftData":[],"selectedToken":"MyToken1"}]]></data>
+        </node>
+        <node id="55" type="numberNode" x="463.2122597465536" y="4426.1726450916585">
+            <data><![CDATA[{"label":"number","value":"mint_amount"}]]></data>
+        </node>
+        <node id="56" type="joinNode" x="1293.7647358532251" y="4329.183786862097">
+            <data><![CDATA[{"label":"Join"}]]></data>
+        </node>
+        <node id="57" type="transferNode" x="1681.7201687714726" y="4348.3083504566575">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="58" type="addressNode" x="1321.9539949067355" y="4520.972912307624">
+            <data><![CDATA[{"label":"address","value":"send_to"}]]></data>
+        </node>
+        <node id="59" type="entryNode" x="391.9539949067355" y="4834.972912307624">
+            <data><![CDATA[{"label":"Entry","name":"mint_t2","tokenSelections":[{"id":0,"selectedToken":"MyToken2"}],"tokens":["MyToken1","MyToken2","LiquidityPoolToken"]}]]></data>
+        </node>
+        <node id="60" type="numberNode" x="41.95399490673549" y="4972.972912307624">
+            <data><![CDATA[{"label":"number","value":"0"}]]></data>
+        </node>
+        <node id="61" type="mintNode" x="899.9539949067355" y="4936.972912307624">
+            <data><![CDATA[{"label":"Mint","allTokens":[{"name":"MyToken1","type":"Fungible"},{"name":"MyToken2","type":"Fungible"},{"name":"LiquidityPoolToken","type":"Fungible"}],"nftData":[],"selectedToken":"MyToken2"}]]></data>
+        </node>
+        <node id="62" type="numberNode" x="449.9539949067355" y="5134.972912307624">
+            <data><![CDATA[{"label":"number","value":"mint_amount"}]]></data>
+        </node>
+        <node id="63" type="joinNode" x="1311.9539949067355" y="5016.972912307624">
+            <data><![CDATA[{"label":"Join"}]]></data>
+        </node>
+        <node id="64" type="transferNode" x="1703.9539949067355" y="5038.972912307624">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="65" type="addressNode" x="1341.9539949067355" y="5226.972912307624">
+            <data><![CDATA[{"label":"address","value":"send_to"}]]></data>
+        </node>
+        <node id="66" type="ifNode" x="1509.1495486259944" y="673.3601386594937">
+            <data><![CDATA[{"label":"If"}]]></data>
+        </node>
+        <node id="67" type="booleanNode" x="1106.9900836401157" y="537.2172554216008">
+            <data><![CDATA[{"label":"boolean","value":"t1_pool_amount * t2_amount == t2_pool_amount * t1_amount"}]]></data>
+        </node>
+        <node id="68" type="exceptionNode" x="1931.7015771855786" y="801.6101843258062">
+            <data><![CDATA[{"label":"Exception"}]]></data>
+        </node>
+        <node id="69" type="joinNode" x="2401.7276157100514" y="804.6098485426157">
+            <data><![CDATA[{"label":"Join"}]]></data>
+        </node>
+    </nodes>
+    <edges>
+        <edge id="reactflow__edge-4number-3number-quantity-0" source="4" target="3" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-5number-3number-quantity-1" source="5" target="3" sourceHandle="number" targetHandle="number-quantity-1"/>
+        <edge id="reactflow__edge-11boolean-10boolean-condition" source="11" target="10" sourceHandle="boolean" targetHandle="boolean-condition"/>
+        <edge id="reactflow__edge-13number-12number-value" source="13" target="12" sourceHandle="number" targetHandle="number-value"/>
+        <edge id="reactflow__edge-17number-16number-quantity" source="17" target="16" sourceHandle="number" targetHandle="number-quantity"/>
+        <edge id="reactflow__edge-16output-18input-stream" source="16" target="18" sourceHandle="output" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-16minted-output-19input-stream" source="16" target="19" sourceHandle="minted-output" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-20address-19address-recipient" source="20" target="19" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-22number-21number-value" source="22" target="21" sourceHandle="number" targetHandle="number-value"/>
+        <edge id="reactflow__edge-21output-stream-23input-stream" source="21" target="23" sourceHandle="output-stream" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-24boolean-23boolean-value" source="24" target="23" sourceHandle="boolean" targetHandle="boolean-value"/>
+        <edge id="reactflow__edge-28number-27number-quantity-0" source="28" target="27" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-27output-stream-0-29input-stream" source="27" target="29" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-30number-29number-amount" source="30" target="29" sourceHandle="number" targetHandle="number-amount"/>
+        <edge id="reactflow__edge-29output-stream-31input-stream" source="29" target="31" sourceHandle="output-stream" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-32number-31number-amount" source="32" target="31" sourceHandle="number" targetHandle="number-amount"/>
+        <edge id="reactflow__edge-29withdrawn-stream-33input-stream" source="29" target="33" sourceHandle="withdrawn-stream" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-34address-33address-recipient" source="34" target="33" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-31withdrawn-stream-35input-stream" source="31" target="35" sourceHandle="withdrawn-stream" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-36address-35address-recipient" source="36" target="35" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-31output-stream-37to-burn" source="31" target="37" sourceHandle="output-stream" targetHandle="to-burn"/>
+        <edge id="reactflow__edge-39number-38number-quantity-0" source="39" target="38" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-38output-stream-0-40input-stream" source="38" target="40" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-41number-40number-amount" source="41" target="40" sourceHandle="number" targetHandle="number-amount"/>
+        <edge id="reactflow__edge-40withdrawn-stream-42input-stream" source="40" target="42" sourceHandle="withdrawn-stream" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-43address-42address-recipient" source="43" target="42" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-40output-stream-44input-stream" source="40" target="44" sourceHandle="output-stream" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-46number-45number-quantity-0" source="46" target="45" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-45output-stream-0-47input-stream" source="45" target="47" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-48number-47number-amount" source="48" target="47" sourceHandle="number" targetHandle="number-amount"/>
+        <edge id="reactflow__edge-47withdrawn-stream-49input-stream" source="47" target="49" sourceHandle="withdrawn-stream" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-50address-49address-recipient" source="50" target="49" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-47output-stream-51input-stream" source="47" target="51" sourceHandle="output-stream" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-53number-52number-quantity-0" source="53" target="52" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-52output-stream-0-54input-stream" source="52" target="54" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-55number-54number-quantity" source="55" target="54" sourceHandle="number" targetHandle="number-quantity"/>
+        <edge id="reactflow__edge-54output-56input1" source="54" target="56" sourceHandle="output" targetHandle="input1"/>
+        <edge id="reactflow__edge-54minted-output-56input2" source="54" target="56" sourceHandle="minted-output" targetHandle="input2"/>
+        <edge id="reactflow__edge-56output-57input-stream" source="56" target="57" sourceHandle="output" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-58address-57address-recipient" source="58" target="57" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-60number-59number-quantity-0" source="60" target="59" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-59output-stream-0-61input-stream" source="59" target="61" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-62number-61number-quantity" source="62" target="61" sourceHandle="number" targetHandle="number-quantity"/>
+        <edge id="reactflow__edge-61output-63input1" source="61" target="63" sourceHandle="output" targetHandle="input1"/>
+        <edge id="reactflow__edge-61minted-output-63input2" source="61" target="63" sourceHandle="minted-output" targetHandle="input2"/>
+        <edge id="reactflow__edge-63output-64input-stream" source="63" target="64" sourceHandle="output" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-65address-64address-recipient" source="65" target="64" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-10then-66input-stream" source="10" target="66" sourceHandle="then" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-67boolean-66boolean-condition" source="67" target="66" sourceHandle="boolean" targetHandle="boolean-condition"/>
+        <edge id="reactflow__edge-66then-12input-stream" source="66" target="12" sourceHandle="then" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-66else-68input-stream" source="66" target="68" sourceHandle="else" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-3output-stream-0-10input-stream" source="3" target="10" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-3output-stream-1-26input-stream" source="3" target="26" sourceHandle="output-stream-1" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-10else-21input-stream" source="10" target="21" sourceHandle="else" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-23output-stream-69input2" source="23" target="69" sourceHandle="output-stream" targetHandle="input2"/>
+        <edge id="reactflow__edge-12output-stream-69input1" source="12" target="69" sourceHandle="output-stream" targetHandle="input1"/>
+        <edge id="reactflow__edge-69output-16input-stream" source="69" target="16" sourceHandle="output" targetHandle="input-stream"/>
+    </edges>
+    <variables>
+        <variable id="global-sender" name="Sender" type="Address" scope="state"/>
+        <variable id="global-blocknumber" name="BlockNumber" type="Number" scope="state"/>
+        <variable id="86c471fd-a0a2-4069-b83c-d30b0335f19a" name="ever_deposited" type="Boolean" scope="variable" value="false"/>
+        <variable id="ff42ea6d-48c3-41b1-ad77-9eb64d1301a4" name="to_mint" type="Number" scope="variable" value="0"/>
+        <variable id="a7c1a2c7-512c-49fc-a18b-6384149f7600" name="to_redeem" type="Number" scope="input"/>
+        <variable id="8ecb91b0-e211-4db3-8d7c-0c5f7066832a" name="t1_amount" type="Number" scope="input"/>
+        <variable id="e18e40e9-2fff-43c7-9bc7-5feaf61dbd9e" name="t2_amount" type="Number" scope="input"/>
+        <variable id="445c3c5a-6f0c-48d0-922f-db7201078581" name="send_to" type="Address" scope="input"/>
+        <variable id="f8df2840-46a1-4486-ae45-522f3c2afc94" name="mint_amount" type="Number" scope="input"/>
+        <variable id="state-var-ts-1" name="MyToken1_TotalSupply" type="Number" scope="state"/>
+        <variable id="state-var-bof-1" name="MyToken1_balanceOf" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Address&quot;}"/>
+        <variable id="state-var-ts-2" name="MyToken2_TotalSupply" type="Number" scope="state"/>
+        <variable id="state-var-bof-2" name="MyToken2_balanceOf" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Address&quot;}"/>
+        <variable id="state-var-ts-9" name="LiquidityPoolToken_TotalSupply" type="Number" scope="state"/>
+        <variable id="state-var-bof-9" name="LiquidityPoolToken_balanceOf" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Address&quot;}"/>
+        <variable id="state-var-amount-14" name="t1_pool_amount" type="Number" scope="state"/>
+        <variable id="state-var-amount-15" name="t2_pool_amount" type="Number" scope="state"/>
+    </variables>
+</model>

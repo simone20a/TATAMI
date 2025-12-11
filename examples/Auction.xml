@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model>
+    <nodes>
+        <node id="1" type="fungibleTokenNode" x="128.10226526487332" y="79.55176379282878">
+            <data><![CDATA[{"label":"Fungible Token","name":"AuctionToken","symbol":"AT"}]]></data>
+        </node>
+        <node id="2" type="entryNode" x="402.4097181419045" y="446.5650268017369">
+            <data><![CDATA[{"label":"Entry","name":"start","tokenSelections":[{"id":0,"selectedToken":"AuctionToken"}],"tokens":["AuctionToken"]}]]></data>
+        </node>
+        <node id="3" type="numberNode" x="83.96716237826249" y="586.6268978015129">
+            <data><![CDATA[{"label":"number","value":"initialBid"}]]></data>
+        </node>
+        <node id="4" type="setNode" x="847.7007608487398" y="478.2771485375349">
+            <data><![CDATA[{"label":"Set","variables":[{"id":"fa4047a0-30db-4ade-8c48-732b7450425b","name":"auctionStart","type":"Number","scope":"variable","value":"0","isDeletable":true},{"id":"11ec15d7-edbf-4a2d-827b-e2b390263274","name":"auctionStarted","type":"Boolean","scope":"variable","value":"false","isDeletable":true},{"id":"d29e109f-ec2e-4419-868d-e264bc7b08ad","name":"hightestBidder","type":"Address","scope":"variable","value":"0x0","isDeletable":true},{"id":"821ac428-e177-48d0-94ab-1d887161a0ce","name":"previousBidder","type":"Address","scope":"variable","value":"0x0","isDeletable":true}],"selectedVariable":"auctionStart"}]]></data>
+        </node>
+        <node id="5" type="numberNode" x="460.5486079908683" y="735.9381376408969">
+            <data><![CDATA[{"label":"number","value":"BlockNumber"}]]></data>
+        </node>
+        <node id="6" type="setNode" x="1290.026541552569" y="497.70693479217164">
+            <data><![CDATA[{"label":"Set","variables":[{"id":"fa4047a0-30db-4ade-8c48-732b7450425b","name":"auctionStart","type":"Number","scope":"variable","value":"0","isDeletable":true},{"id":"11ec15d7-edbf-4a2d-827b-e2b390263274","name":"auctionStarted","type":"Boolean","scope":"variable","value":"false","isDeletable":true},{"id":"d29e109f-ec2e-4419-868d-e264bc7b08ad","name":"hightestBidder","type":"Address","scope":"variable","value":"0x0","isDeletable":true},{"id":"821ac428-e177-48d0-94ab-1d887161a0ce","name":"previousBidder","type":"Address","scope":"variable","value":"0x0","isDeletable":true}],"selectedVariable":"auctionStarted"}]]></data>
+        </node>
+        <node id="7" type="booleanNode" x="873.8863905018247" y="777.0536105840207">
+            <data><![CDATA[{"label":"boolean","value":"true"}]]></data>
+        </node>
+        <node id="10" type="entryNode" x="415.00075215695404" y="1272.8137402558468">
+            <data><![CDATA[{"label":"Entry","name":"bid","tokenSelections":[{"id":0,"selectedToken":"AuctionToken"}],"tokens":["AuctionToken"]}]]></data>
+        </node>
+        <node id="11" type="numberNode" x="96.59811398664317" y="1413.6049599625858">
+            <data><![CDATA[{"label":"number","value":"toBid"}]]></data>
+        </node>
+        <node id="12" type="poolNode" x="499.26749077042746" y="78.21580888554145">
+            <data><![CDATA[{"label":"Pool","name":"hightestBid","keys":[],"fungibleTokens":[{"name":"AuctionToken","type":"Fungible"}],"selectedToken":"AuctionToken"}]]></data>
+        </node>
+        <node id="13" type="ifNode" x="941.8528610112453" y="1332.433909889571">
+            <data><![CDATA[{"label":"If"}]]></data>
+        </node>
+        <node id="14" type="booleanNode" x="475.4433604700323" y="1121.2890684283461">
+            <data><![CDATA[{"label":"boolean","value":"toBid > hightestBid_amount && auctionStarted && BlockNumber < auctionStart + auctionDuration"}]]></data>
+        </node>
+        <node id="15" type="exceptionNode" x="1366.409970443964" y="1639.8243904863018">
+            <data><![CDATA[{"label":"Exception"}]]></data>
+        </node>
+        <node id="16" type="withdrawNode" x="2058.9489930651316" y="1349.5597654177548">
+            <data><![CDATA[{"label":"Withdraw","pools":[{"label":"Pool","name":"hightestBid","keys":[],"fungibleTokens":[{"name":"AuctionToken","type":"Fungible"}],"selectedToken":"AuctionToken","tokenType":"Fungible"}],"selectedPool":"hightestBid"}]]></data>
+        </node>
+        <node id="17" type="numberNode" x="1678.873689806453" y="1530.081746695679">
+            <data><![CDATA[{"label":"number","value":"hightestBid_amount"}]]></data>
+        </node>
+        <node id="19" type="addressNode" x="2148.7934451049687" y="1737.7641570916767">
+            <data><![CDATA[{"label":"address","value":"previousBidder"}]]></data>
+        </node>
+        <node id="20" type="setNode" x="2912.44390551849" y="1359.1719524824252">
+            <data><![CDATA[{"label":"Set","variables":[{"id":"fa4047a0-30db-4ade-8c48-732b7450425b","name":"auctionStart","type":"Number","scope":"variable","value":"0","isDeletable":true},{"id":"11ec15d7-edbf-4a2d-827b-e2b390263274","name":"auctionStarted","type":"Boolean","scope":"variable","value":"false","isDeletable":true},{"id":"d29e109f-ec2e-4419-868d-e264bc7b08ad","name":"hightestBidder","type":"Address","scope":"variable","value":"0x0","isDeletable":true},{"id":"821ac428-e177-48d0-94ab-1d887161a0ce","name":"previousBidder","type":"Address","scope":"variable","value":"0x0","isDeletable":true}],"selectedVariable":"hightestBidder"}]]></data>
+        </node>
+        <node id="21" type="addressNode" x="2524.546022321726" y="1561.275885512064">
+            <data><![CDATA[{"label":"address","value":"Sender"}]]></data>
+        </node>
+        <node id="22" type="depositNode" x="3332.8020927463126" y="1448.239155287068">
+            <data><![CDATA[{"label":"Deposit","pools":[{"label":"Pool","name":"hightestBid","keys":[],"fungibleTokens":[{"name":"AuctionToken","type":"Fungible"}],"selectedToken":"AuctionToken","tokenType":"Fungible"}],"selectedPool":"hightestBid"}]]></data>
+        </node>
+        <node id="23" type="transferNode" x="2525.3846275622873" y="1689.989982988609">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="24" type="setNode" x="1661.3846275622873" y="1259.989982988609">
+            <data><![CDATA[{"label":"Set","variables":[{"id":"fa4047a0-30db-4ade-8c48-732b7450425b","name":"auctionStart","type":"Number","scope":"variable","value":"0","isDeletable":true},{"id":"11ec15d7-edbf-4a2d-827b-e2b390263274","name":"auctionStarted","type":"Boolean","scope":"variable","value":"false","isDeletable":true},{"id":"d29e109f-ec2e-4419-868d-e264bc7b08ad","name":"hightestBidder","type":"Address","scope":"variable","value":"0x0","isDeletable":true},{"id":"821ac428-e177-48d0-94ab-1d887161a0ce","name":"previousBidder","type":"Address","scope":"variable","value":"0x0","isDeletable":true}],"selectedVariable":"previousBidder"}]]></data>
+        </node>
+        <node id="25" type="addressNode" x="1345.3846275622873" y="1457.989982988609">
+            <data><![CDATA[{"label":"address","value":"hightestBidder"}]]></data>
+        </node>
+        <node id="26" type="setNode" x="1728.3846275622873" y="516.989982988609">
+            <data><![CDATA[{"label":"Set","variables":[{"id":"fa4047a0-30db-4ade-8c48-732b7450425b","name":"auctionStart","type":"Number","scope":"variable","value":"0","isDeletable":true},{"id":"11ec15d7-edbf-4a2d-827b-e2b390263274","name":"auctionStarted","type":"Boolean","scope":"variable","value":"false","isDeletable":true},{"id":"d29e109f-ec2e-4419-868d-e264bc7b08ad","name":"hightestBidder","type":"Address","scope":"variable","value":"0x0","isDeletable":true},{"id":"821ac428-e177-48d0-94ab-1d887161a0ce","name":"previousBidder","type":"Address","scope":"variable","value":"0x0","isDeletable":true}],"selectedVariable":"hightestBidder"}]]></data>
+        </node>
+        <node id="27" type="addressNode" x="1326.3846275622873" y="788.989982988609">
+            <data><![CDATA[{"label":"address","value":"Sender"}]]></data>
+        </node>
+        <node id="28" type="depositNode" x="2140.3846275622873" y="605.989982988609">
+            <data><![CDATA[{"label":"Deposit","pools":[{"label":"Pool","name":"hightestBid","keys":[],"fungibleTokens":[{"name":"AuctionToken","type":"Fungible"}],"selectedToken":"AuctionToken","tokenType":"Fungible"}],"selectedPool":"hightestBid"}]]></data>
+        </node>
+        <node id="29" type="entryNode" x="398.3846275622873" y="2266.989982988609">
+            <data><![CDATA[{"label":"Entry","name":"withdraw","tokenSelections":[{"id":0,"selectedToken":"AuctionToken"}],"tokens":["AuctionToken"]}]]></data>
+        </node>
+        <node id="30" type="numberNode" x="60.38462756228728" y="2406.989982988609">
+            <data><![CDATA[{"label":"number","value":"0"}]]></data>
+        </node>
+        <node id="31" type="ifNode" x="936.3846275622873" y="2330.989982988609">
+            <data><![CDATA[{"label":"If"}]]></data>
+        </node>
+        <node id="32" type="booleanNode" x="468.3846275622873" y="2129.695618919539">
+            <data><![CDATA[{"label":"boolean","value":"Sender = hightestBidder && BlockNumber >= auctionStart + auctionDuration"}]]></data>
+        </node>
+        <node id="34" type="booleanNode" x="1376.4335238887202" y="2433.369730787835">
+            <data><![CDATA[{"label":"boolean","value":"false"}]]></data>
+        </node>
+        <node id="35" type="setNode" x="1705.869930795749" y="2260.415617161645">
+            <data><![CDATA[{"label":"Set","variables":[{"id":"fa4047a0-30db-4ade-8c48-732b7450425b","name":"auctionStart","type":"Number","scope":"variable","value":"0","isDeletable":true},{"id":"11ec15d7-edbf-4a2d-827b-e2b390263274","name":"auctionStarted","type":"Boolean","scope":"variable","value":"false","isDeletable":true},{"id":"d29e109f-ec2e-4419-868d-e264bc7b08ad","name":"hightestBidder","type":"Address","scope":"variable","value":"0x0","isDeletable":true},{"id":"821ac428-e177-48d0-94ab-1d887161a0ce","name":"previousBidder","type":"Address","scope":"variable","value":"0x0","isDeletable":true}],"selectedVariable":"auctionStarted"}]]></data>
+        </node>
+        <node id="36" type="exceptionNode" x="1369.8447957505796" y="2593.1463881377445">
+            <data><![CDATA[{"label":"Exception"}]]></data>
+        </node>
+        <node id="37" type="withdrawNode" x="2152.2562621547736" y="2349.363447026543">
+            <data><![CDATA[{"label":"Withdraw","pools":[{"label":"Pool","name":"hightestBid","keys":[],"fungibleTokens":[{"name":"AuctionToken","type":"Fungible"}],"selectedToken":"AuctionToken","tokenType":"Fungible"}],"selectedPool":"hightestBid"}]]></data>
+        </node>
+        <node id="38" type="numberNode" x="1738.813571486452" y="2533.847834894479">
+            <data><![CDATA[{"label":"number","value":"hightestBid_amount"}]]></data>
+        </node>
+        <node id="39" type="joinNode" x="2531.1081300978567" y="2428.42818468423">
+            <data><![CDATA[{"label":"Join"}]]></data>
+        </node>
+        <node id="40" type="transferNode" x="2972.5529153532743" y="2446.5471870641168">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="41" type="addressNode" x="2564.051770788559" y="2621.148482724842">
+            <data><![CDATA[{"label":"address","value":"Sender"}]]></data>
+        </node>
+    </nodes>
+    <edges>
+        <edge id="reactflow__edge-3number-2number-quantity-0" source="3" target="2" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-2output-stream-0-4input-stream" source="2" target="4" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-5number-4number-value" source="5" target="4" sourceHandle="number" targetHandle="number-value"/>
+        <edge id="reactflow__edge-4output-stream-6input-stream" source="4" target="6" sourceHandle="output-stream" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-7boolean-6boolean-value" source="7" target="6" sourceHandle="boolean" targetHandle="boolean-value"/>
+        <edge id="reactflow__edge-11number-10number-quantity-0" source="11" target="10" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-10output-stream-0-13input-stream" source="10" target="13" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-14boolean-13boolean-condition" source="14" target="13" sourceHandle="boolean" targetHandle="boolean-condition"/>
+        <edge id="reactflow__edge-13else-15input-stream" source="13" target="15" sourceHandle="else" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-17number-16number-amount" source="17" target="16" sourceHandle="number" targetHandle="number-amount"/>
+        <edge id="reactflow__edge-16output-stream-20input-stream" source="16" target="20" sourceHandle="output-stream" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-21address-20address-value" source="21" target="20" sourceHandle="address" targetHandle="address-value"/>
+        <edge id="reactflow__edge-20output-stream-22input-stream" source="20" target="22" sourceHandle="output-stream" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-19address-23address-recipient" source="19" target="23" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-16withdrawn-stream-23input-stream" source="16" target="23" sourceHandle="withdrawn-stream" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-13then-24input-stream" source="13" target="24" sourceHandle="then" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-24output-stream-16input-stream" source="24" target="16" sourceHandle="output-stream" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-25address-24address-value" source="25" target="24" sourceHandle="address" targetHandle="address-value"/>
+        <edge id="reactflow__edge-6output-stream-26input-stream" source="6" target="26" sourceHandle="output-stream" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-27address-26address-value" source="27" target="26" sourceHandle="address" targetHandle="address-value"/>
+        <edge id="reactflow__edge-26output-stream-28input-stream" source="26" target="28" sourceHandle="output-stream" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-30number-29number-quantity-0" source="30" target="29" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-29output-stream-0-31input-stream" source="29" target="31" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-32boolean-31boolean-condition" source="32" target="31" sourceHandle="boolean" targetHandle="boolean-condition"/>
+        <edge id="reactflow__edge-34boolean-35boolean-value" source="34" target="35" sourceHandle="boolean" targetHandle="boolean-value"/>
+        <edge id="reactflow__edge-31then-35input-stream" source="31" target="35" sourceHandle="then" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-31else-36input-stream" source="31" target="36" sourceHandle="else" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-35output-stream-37input-stream" source="35" target="37" sourceHandle="output-stream" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-38number-37number-amount" source="38" target="37" sourceHandle="number" targetHandle="number-amount"/>
+        <edge id="reactflow__edge-37output-stream-39input1" source="37" target="39" sourceHandle="output-stream" targetHandle="input1"/>
+        <edge id="reactflow__edge-37withdrawn-stream-39input2" source="37" target="39" sourceHandle="withdrawn-stream" targetHandle="input2"/>
+        <edge id="reactflow__edge-39output-40input-stream" source="39" target="40" sourceHandle="output" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-41address-40address-recipient" source="41" target="40" sourceHandle="address" targetHandle="address-recipient"/>
+    </edges>
+    <variables>
+        <variable id="global-sender" name="Sender" type="Address" scope="state"/>
+        <variable id="global-blocknumber" name="BlockNumber" type="Number" scope="state"/>
+        <variable id="fa4047a0-30db-4ade-8c48-732b7450425b" name="auctionStart" type="Number" scope="variable" value="0"/>
+        <variable id="11ec15d7-edbf-4a2d-827b-e2b390263274" name="auctionStarted" type="Boolean" scope="variable" value="false"/>
+        <variable id="d29e109f-ec2e-4419-868d-e264bc7b08ad" name="hightestBidder" type="Address" scope="variable" value="0x0"/>
+        <variable id="177a665b-a840-467c-9c66-baeca5c94fe0" name="toBid" type="Number" scope="input"/>
+        <variable id="821ac428-e177-48d0-94ab-1d887161a0ce" name="previousBidder" type="Address" scope="variable" value="0x0"/>
+        <variable id="d4e6b8cd-2c7a-46db-a0ba-78add1856fad" name="initialBid" type="Number" scope="input"/>
+        <variable id="970ac1e0-9257-4887-a5cc-f4e4fa887ec2" name="auctionDuration" type="Number" scope="constant" value="100"/>
+        <variable id="state-var-ts-1" name="AuctionToken_TotalSupply" type="Number" scope="state"/>
+        <variable id="state-var-bof-1" name="AuctionToken_balanceOf" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Address&quot;}"/>
+        <variable id="state-var-amount-12" name="hightestBid_amount" type="Number" scope="state"/>
+    </variables>
+</model>
