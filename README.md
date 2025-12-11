@@ -15,7 +15,7 @@ Before you begin, ensure you have the following installed on your machine:
 
 1.  **Clone the repository**:
     ```bash
-    git clone <reposiroty url>
+    git clone https://github.com/simone20a/TATAMI.git
     cd TATAMI
     ```
 
