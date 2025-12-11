@@ -1,6 +1,8 @@
-# TokenFlow
-
-This repository contains the `nextn` tool. Follow the instructions below to set up and run the project locally.
+# TATAMI
+TATAMI (plaTform-Agnostic Token mAnagement &
+ModelIng) is a workflow-based visual modeling lan-
+guage specifically tailored for the design and imple-
+mentation of tokenomics.
 
 ## Requirements
 
@@ -13,7 +15,7 @@ Before you begin, ensure you have the following installed on your machine:
 
 1.  **Clone the repository**:
     ```bash
-    git clone <repository-url>
+    git clone [https://github.com/simone20a/TATAMI.git](https://github.com/simone20a/TATAMI.git)
     cd TATAMI
     ```
 
