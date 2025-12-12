@@ -190,7 +190,7 @@ const blockDescriptions = [
                 icon: GitMerge,
                 color: "text-primary",
                 content: () => (
-                     <>
+                    <>
                         <p className="mb-2"><strong>Purpose:</strong> Merges two token streams into a single stream. The two input streams must belong to the same original `EntryNode`.</p>
                         <p className="mb-2"><strong>Inputs:</strong></p>
                         <ul className="list-disc pl-5 space-y-1">
@@ -339,7 +339,7 @@ const blockDescriptions = [
                 icon: Hash,
                 color: "text-red-500",
                 content: () => (
-                     <>
+                    <>
                         <p className="mb-2"><strong>Purpose:</strong> Provides an Number numerical value.</p>
                         <p className="mb-2"><strong>Output:</strong> `Number`.</p>
                         <p className="mt-3"><strong>Usage:</strong> The input field accepts a string that can be a literal number (e.g., `'100'`), a reference to an `Number` variable (e.g., `mint_amount`), a state accessor like `MyToken_TotalSupply` or `MyToken_balanceOf(owner_address)`, or a mathematical expression (e.g., `my_var * 2`).</p>
@@ -384,16 +384,16 @@ const sections = [
         content: () => (
             <div className="space-y-4 text-sm">
                 <p>Welcome to the visual editor! This guide will walk you through the user interface and the recommended workflow for creating your models.</p>
-                
+
                 <div>
                     <h4 className="font-semibold mb-2 text-md">User Interface Overview</h4>
                     <ul className="list-disc pl-5 space-y-2">
                         <li><strong>The Canvas:</strong> The main area where you build your logic flows. You can pan by clicking and dragging, and zoom using your mouse wheel.</li>
-                        <li><strong>Adding Blocks:</strong> <span className="inline-flex items-center"><MousePointerClick className="w-4 h-4 mr-1"/></span><strong>Right-click</strong> anywhere on the canvas to open a context menu. From here, you can select and add different types of blocks to your model.</li>
-                        <li><strong>Managing Variables:</strong> Click the <span className="inline-flex items-center"><Package className="w-4 h-4 mx-1"/></span> button in the top-left corner to open the <strong>Variables Panel</strong>. Here you can define constants, and inputs, and inspect the model's state.</li>
-                        <li><strong>Exporting:</strong> Click the <span className="inline-flex items-center"><Download className="w-4 h-4 mx-1"/></span> button in the top-right to save your current model as an XML file.</li>
-                        <li><strong>Error Checking:</strong> Click the <span className="inline-flex items-center"><AlertCircle className="w-4 h-4 mx-1"/></span> button to check your model for common errors.</li>
-                        <li><strong>Documentation:</strong> Click the <span className="inline-flex items-center"><HelpCircle className="w-4 h-4 mx-1"/></span> button to open this help panel at any time.</li>
+                        <li><strong>Adding Blocks:</strong> <span className="inline-flex items-center"><MousePointerClick className="w-4 h-4 mr-1" /></span><strong>Right-click</strong> anywhere on the canvas to open a context menu. From here, you can select and add different types of blocks to your model.</li>
+                        <li><strong>Managing Model State:</strong> Click the <span className="inline-flex items-center"><Package className="w-4 h-4 mx-1" /></span> button in the top-left corner to open the <strong>State Panel</strong>. Here you can define constants, and inputs, and inspect the whole model's state.</li>
+                        <li><strong>Exporting:</strong> Click the <span className="inline-flex items-center"><Download className="w-4 h-4 mx-1" /></span> button in the top-right to save your current model as an XML file.</li>
+                        <li><strong>Error Checking:</strong> Click the <span className="inline-flex items-center"><AlertCircle className="w-4 h-4 mx-1" /></span> button to check your model for common errors.</li>
+                        <li><strong>Documentation:</strong> Click the <span className="inline-flex items-center"><HelpCircle className="w-4 h-4 mx-1" /></span> button to open this help panel at any time.</li>
                     </ul>
                 </div>
 
@@ -405,7 +405,7 @@ const sections = [
                             <strong>1. Define Independent Elements:</strong> Start by adding your core, non-flow elements to the canvas. These are found under the <Badge variant="secondary">Independent Elements</Badge> category in the context menu. Define your <strong className="text-primary">Fungible Tokens</strong>, <strong className="text-purple-500">Non-Fungible Tokens</strong>, and <strong className="text-cyan-500">Pools</strong>. This step is crucial as it automatically generates the necessary <strong>State</strong> variables for your model.
                         </li>
                         <li>
-                            <strong>2. Set Up Variables and Inputs:</strong> Open the <span className="inline-flex items-center"><Package className="w-4 h-4 mr-1"/></span> <strong>Variables Panel</strong> to define any global constants or inputs your logic will need. For example, you might create a `fee_address` constant or a `user_id` input.
+                            <strong>2. Set Up Variables and Inputs:</strong> Open the <span className="inline-flex items-center"><Package className="w-4 h-4 mr-1" /></span> <strong>Variables Panel</strong> to define any global constants or inputs your logic will need. For example, you might create a `fee_address` constant or a `user_id` input.
                         </li>
                         <li>
                             <strong>3. Build the Logic Flow:</strong> Add an <strong className="text-primary">Entry</strong> block to begin your flow. Then, add other <Badge variant="secondary">Flow Blocks</Badge> like <strong className="text-primary">Mint</strong>, <strong className="text-primary">If</strong>, or <strong className="text-primary">Transfer</strong>. Connect them by dragging from a source handle (right side of a block) to a target handle (left side).
@@ -414,7 +414,7 @@ const sections = [
                             <strong>4. Provide Data with Type Blocks:</strong> Use <Badge variant="secondary">Type Blocks</Badge> (e.g., <strong className="text-red-500">Number</strong>, <strong className="text-blue-500">Address</strong>) to feed data into your flow blocks. In the input field of a Type Block, you can enter a literal value (e.g., `'100'`), reference a variable you created (e.g., `mint_amount`), or access a model state property (e.g., `Sender` or `MyToken_balanceOf(recipient_address)`).
                         </li>
                         <li>
-                            <strong>5. Validate Your Model:</strong> Periodically click the <span className="inline-flex items-center"><AlertCircle className="w-4 h-4 mx-1"/></span> <strong>Validate</strong> button to check for errors like unconnected blocks, loops, or missing selections. This helps ensure your model is correct and complete.
+                            <strong>5. Validate Your Model:</strong> Periodically click the <span className="inline-flex items-center"><AlertCircle className="w-4 h-4 mx-1" /></span> <strong>Validate</strong> button to check for errors like unconnected blocks, loops, or missing selections. This helps ensure your model is correct and complete.
                         </li>
                     </ol>
                 </div>
@@ -437,7 +437,7 @@ const sections = [
             <div className="space-y-4 text-sm">
                 <div>The model's data is managed through two primary concepts: <strong>Variables</strong> (user-defined) and <strong>State</strong> (auto-generated).</div>
                 <div className="space-y-2">
-                    <div><strong>User-Defined Variables:</strong> Created in the <span className="inline-flex items-center"><Package className="w-4 h-4 mr-1"/></span> panel. They can be:
+                    <div><strong>User-Defined Variables:</strong> Created in the <span className="inline-flex items-center"><Package className="w-4 h-4 mr-1" /></span> panel. They can be:
                         <ul className="list-disc pl-6 mt-1 space-y-1">
                             <li><Badge variant="secondary">Constants</Badge>: Fixed values set at design time (e.g., a fee amount).</li>
                             <li><Badge variant="secondary">Inputs</Badge>: Dynamic values provided at execution time (e.g., a user ID).</li>
@@ -454,7 +454,7 @@ const sections = [
         title: "Error Checking",
         content: () => (
             <div className="space-y-4 text-sm">
-                <p>The visual editor includes a validation tool to help you find common errors in your model. Click the <span className="inline-flex items-center"><AlertCircle className="w-4 h-4 mx-1"/></span> <strong>Validate</strong> button in the top-right corner to run the checks.</p>
+                <p>The visual editor help you find common errors in your models. Click the <span className="inline-flex items-center"><AlertCircle className="w-4 h-4 mx-1" /></span> <strong>Validate</strong> button in the top-right corner to run the checks.</p>
                 <p>The validator will check for the following issues:</p>
                 <ul className="list-disc pl-5 space-y-2">
                     <li><strong>Cyclical Dependencies (Loops):</strong> The validator detects if you have created an infinite loop in your token flow, which is not allowed.</li>
@@ -509,14 +509,14 @@ const allSections = [
                             {section.title}
                         </a>
                         {section.title === "Detailed Block Descriptions" && (
-                             <ul className="list-['-_'] pl-5 space-y-1 mt-2">
+                            <ul className="list-['-_'] pl-5 space-y-1 mt-2">
                                 {blockDescriptions.map(category => (
                                     <li key={category.category}>
                                         <span className="font-semibold text-sm">{category.category}</span>
                                         <ul className="list-disc pl-5 space-y-1 mt-1">
                                             {category.blocks.map(block => (
                                                 <li key={block.name}>
-                                                     <a href={`#${slugify(block.name)}`} className="text-primary hover:underline text-sm">
+                                                    <a href={`#${slugify(block.name)}`} className="text-primary hover:underline text-sm">
                                                         {block.name}
                                                     </a>
                                                 </li>
@@ -540,7 +540,7 @@ export default function DocumentationSheet({ open, onOpenChange }: Documentation
         <Sheet open={open} onOpenChange={onOpenChange}>
             <SheetContent className="w-full sm:max-w-lg">
                 <SheetHeader>
-                    <SheetTitle>Language Documentation</SheetTitle>
+                    <SheetTitle>TATAMI language Documentation</SheetTitle>
                     <SheetDescription>
                         A complete reference guide to the visual editor and its functionalities.
                     </SheetDescription>
@@ -560,6 +560,5 @@ export default function DocumentationSheet({ open, onOpenChange }: Documentation
     );
 }
 
-    
 
-    
+

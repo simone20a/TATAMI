@@ -112,12 +112,12 @@ export default function VariablesSheet({ open, onOpenChange, variables, setVaria
 
     const userVariables = variables.filter(v => v.scope !== 'state');
     const stateVariables = variables.filter(v => v.scope === 'state');
-    
+
     return (
         <Sheet open={open} onOpenChange={onOpenChange}>
             <SheetContent className="w-full sm:max-w-md">
                 <SheetHeader>
-                    <SheetTitle>Model State and Variables</SheetTitle>
+                    <SheetTitle>Model State</SheetTitle>
                     <SheetDescription>
                         Define constants and inputs, and inspect the model's state.
                     </SheetDescription>
@@ -125,7 +125,7 @@ export default function VariablesSheet({ open, onOpenChange, variables, setVaria
                 <div className="py-4 space-y-4">
                     {!isAdding ? (
                         <Button onClick={() => setIsAdding(true)} className="w-full">
-                            <Plus className="w-4 h-4 mr-2"/>
+                            <Plus className="w-4 h-4 mr-2" />
                             Add Variable
                         </Button>
                     ) : (
@@ -133,13 +133,13 @@ export default function VariablesSheet({ open, onOpenChange, variables, setVaria
                             <div className="flex justify-between items-center">
                                 <h4 className="font-semibold text-sm">Add New Variable</h4>
                                 <Button variant="ghost" size="icon" className="h-6 w-6" onClick={() => setIsAdding(false)}>
-                                    <X className="w-4 h-4"/>
+                                    <X className="w-4 h-4" />
                                 </Button>
                             </div>
                             <div className="grid grid-cols-2 gap-3">
                                 <div className="space-y-1">
                                     <Label htmlFor="var-name" className="text-xs">Name</Label>
-                                    <Input id="var-name" value={newVarName} onChange={(e) => setNewVarName(e.target.value)} placeholder="e.g., ownerAddress" className="h-8 text-xs"/>
+                                    <Input id="var-name" value={newVarName} onChange={(e) => setNewVarName(e.target.value)} placeholder="e.g., ownerAddress" className="h-8 text-xs" />
                                 </div>
                                 <div className="space-y-1">
                                     <Label htmlFor="var-type" className="text-xs">Type</Label>
@@ -172,17 +172,17 @@ export default function VariablesSheet({ open, onOpenChange, variables, setVaria
                             {newVarScope === 'constant' && (
                                 <div className="space-y-1">
                                     <Label htmlFor="var-value" className="text-xs">Value</Label>
-                                    <Input id="var-value" value={newVarValue} onChange={(e) => setNewVarValue(e.target.value)} placeholder="Enter constant value" className="h-8 text-xs"/>
+                                    <Input id="var-value" value={newVarValue} onChange={(e) => setNewVarValue(e.target.value)} placeholder="Enter constant value" className="h-8 text-xs" />
                                 </div>
                             )}
                             {newVarScope === 'variable' && (
                                 <div className="space-y-1">
                                     <Label htmlFor="var-initial-value" className="text-xs">Initial Value</Label>
-                                    <Input id="var-initial-value" value={newVarValue} onChange={(e) => setNewVarValue(e.target.value)} placeholder="Enter initial value" className="h-8 text-xs"/>
+                                    <Input id="var-initial-value" value={newVarValue} onChange={(e) => setNewVarValue(e.target.value)} placeholder="Enter initial value" className="h-8 text-xs" />
                                 </div>
                             )}
                             <Button onClick={addVariable} size="sm" className="w-full">
-                                <Plus className="w-4 h-4 mr-2"/>
+                                <Plus className="w-4 h-4 mr-2" />
                                 Confirm
                             </Button>
                         </div>
@@ -194,7 +194,7 @@ export default function VariablesSheet({ open, onOpenChange, variables, setVaria
                 <ScrollArea className="h-[calc(100vh-16rem)] mt-4">
                     <div className="space-y-4 pr-6">
                         <div>
-                            <h4 className="text-sm font-semibold text-muted-foreground mb-2">State</h4>
+                            <h3 className="text-sm font-semibold text-muted-foreground mb-2">Read-Only State</h3>
                             <div className="space-y-3">
                                 {stateVariables.length === 0 && <p className="text-xs text-center text-muted-foreground pt-2">No state variables defined.</p>}
                                 {stateVariables.map(v => (
@@ -214,7 +214,7 @@ export default function VariablesSheet({ open, onOpenChange, variables, setVaria
                         </div>
 
                         <div>
-                            <h4 className="text-sm font-semibold text-muted-foreground mb-2">Variables</h4>
+                            <h4 className="text-sm font-semibold text-muted-foreground mb-2">Variables, Constants and Inputs</h4>
                             <div className="space-y-3">
                                 {userVariables.length === 0 && <p className="text-xs text-center text-muted-foreground pt-2">No variables defined.</p>}
                                 {userVariables.map(v => (
@@ -231,7 +231,7 @@ export default function VariablesSheet({ open, onOpenChange, variables, setVaria
                                         </div>
                                         {v.isDeletable !== false &&
                                             <Button variant="ghost" size="icon" className="h-7 w-7 text-muted-foreground hover:text-destructive" onClick={() => deleteVariable(v.id)}>
-                                                <Trash2 className="w-4 h-4"/>
+                                                <Trash2 className="w-4 h-4" />
                                             </Button>
                                         }
                                     </div>
