@@ -48,8 +48,8 @@ TATAMI
 │   ├── AMM_translation/
 │   ├── Auction.xml
 │   ├── Auction_translation/
-│   ├── FoodReborn.xml
-│   └── FoodReborn_translation/
+│   ├── CaseStudy.xml
+│   └── CaseStudy_translation/
 ├── src/                       # Source code
 │   ├── app/
 │   ├── components/
