@@ -771,7 +771,7 @@ const Flow = ({ projectName, initialNodes = [], initialEdges = [], initialVariab
           ...node,
           data: {
             ...node.data,
-            tokens: allTokensFiltered.map(t => t.name),
+            tokens: allTokensFiltered.map(t => ({ name: t.name, type: t.type })),
           }
         };
       }
