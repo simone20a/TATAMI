@@ -9,7 +9,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Type, Hash, AtSign, Binary, Spline, Coins, Flame, GitMerge, GitBranch, CircleDollarSign, Diamond, Box, ArrowDownToLine, ArrowUpFromLine, Send, LogIn, AlertTriangle, Pencil } from "lucide-react";
+import { Type, Hash, AtSign, Binary, Spline, Coins, Flame, GitMerge, GitBranch, CircleDollarSign, Diamond, Box, ArrowDownToLine, ArrowUpFromLine, Send, LogIn, AlertTriangle, Pencil, StickyNote } from "lucide-react";
 
 type ContextMenuProps = {
     top: number;
@@ -108,6 +108,17 @@ export default function ContextMenu({ top, left, onClick }: ContextMenuProps) {
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>
+                    <div className="mt-1 pt-1 border-t border-border">
+                        <Button
+                            variant="ghost"
+                            size="sm"
+                            className="w-full justify-start text-xs h-7"
+                            onClick={() => onClick('commentNode')}
+                        >
+                            <StickyNote className="mr-2 h-4 w-4" />
+                            Comment
+                        </Button>
+                    </div>
                 </CardContent>
             </Card>
         </div>

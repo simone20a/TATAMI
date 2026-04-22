@@ -429,6 +429,9 @@ const Flow = ({ projectName, initialNodes = [], initialEdges = [], initialVariab
         case 'setNode':
           data = { label: 'Set' };
           break;
+        case 'commentNode':
+          data = { label: 'Comment', text: '' };
+          break;
         default:
           break;
       }
@@ -438,6 +441,7 @@ const Flow = ({ projectName, initialNodes = [], initialEdges = [], initialVariab
         type,
         position: position || { x: 0, y: 0 },
         data,
+        ...(type === 'commentNode' ? { style: { width: 200, height: 150 } } : {})
       };
       setNodes((nds) => nds.concat(newNode));
       setMenu(null);

@@ -17,6 +17,7 @@ import TransferNode from './TransferNode';
 import EntryNode from './EntryNode';
 import ExceptionNode from './ExceptionNode';
 import SetNode from './SetNode';
+import CommentNode from './CommentNode';
 
 export const nodeTypes = {
   booleanNode: BooleanNode,
@@ -37,6 +38,7 @@ export const nodeTypes = {
   transferNode: TransferNode,
   exceptionNode: ExceptionNode,
   setNode: SetNode,
+  commentNode: CommentNode,
 };
 
 export const initialNodes: Node[] = [];
