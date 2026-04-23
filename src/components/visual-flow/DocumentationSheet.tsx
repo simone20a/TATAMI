@@ -390,7 +390,7 @@ const sections = [
                     <ul className="list-disc pl-5 space-y-2">
                         <li><strong>The Canvas:</strong> The main area where you build your logic flows. You can pan by clicking and dragging, and zoom using your mouse wheel.</li>
                         <li><strong>Adding Blocks:</strong> <span className="inline-flex items-center"><MousePointerClick className="w-4 h-4 mr-1" /></span><strong>Right-click</strong> anywhere on the canvas to open a context menu. From here, you can select and add different types of blocks to your model.</li>
-                        <li><strong>Managing Model State:</strong> Click the <span className="inline-flex items-center"><Package className="w-4 h-4 mx-1" /></span> button in the top-left corner to open the <strong>State Panel</strong>. Here you can define constants, and inputs, and inspect the whole model's state.</li>
+                        <li><strong>Managing Model State:</strong> Click the <span className="inline-flex items-center"><Package className="w-4 h-4 mx-1" /></span> button in the top-left corner to open the <strong>Model State Panel</strong>. Here you can define constants, and inputs, and inspect the whole model's state.</li>
                         <li><strong>Exporting:</strong> Click the <span className="inline-flex items-center"><Download className="w-4 h-4 mx-1" /></span> button in the top-right to save your current model as an XML file.</li>
                         <li><strong>Error Checking:</strong> Click the <span className="inline-flex items-center"><AlertCircle className="w-4 h-4 mx-1" /></span> button to check your model for common errors.</li>
                         <li><strong>Documentation:</strong> Click the <span className="inline-flex items-center"><HelpCircle className="w-4 h-4 mx-1" /></span> button to open this help panel at any time.</li>
@@ -441,7 +441,8 @@ const sections = [
                         <ul className="list-disc pl-6 mt-1 space-y-1">
                             <li><Badge variant="secondary">Constants</Badge>: Fixed values set at design time (e.g., a fee amount).</li>
                             <li><Badge variant="secondary">Inputs</Badge>: Dynamic values provided at execution time (e.g., a user ID).</li>
-                            <li><Badge variant="secondary">Variables</Badge>: Mutable state that can be read and modified during runtime, initialized with a starting value.</li>
+                            <li><Badge variant="secondary">Global Variables</Badge>: Variables which value is common for every agent (account) interacting with the token-flow.</li>
+                            <li><Badge variant="secondary">Local Variables</Badge>: Variables which value is specific for the account executing it.</li>
                         </ul>
                     </div>
                     <div><strong>State:</strong> Read-only properties that reflect the model's condition. They are generated automatically when you create Independent Elements. Examples include `Sender`, `BlockNumber`, `MyToken_TotalSupply`, `MyToken_balanceOf(address)`, and `MyPool_amount`.</div>

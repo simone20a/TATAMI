@@ -612,7 +612,7 @@ const Flow = ({ projectName, initialNodes = [], initialEdges = [], initialVariab
   }).filter(p => p.name && p.name.trim() !== ''), [poolNodes, allTokens]);
 
   const mutableVariables = useMemo(() =>
-    variables.filter(v => v.scope === 'variable'),
+    variables.filter(v => v.scope === 'global_variable' || v.scope === 'local_variable'),
     [variables]
   );
 
@@ -794,7 +794,7 @@ const Flow = ({ projectName, initialNodes = [], initialEdges = [], initialVariab
           ...node,
           data: {
             ...node.data,
-            variables: variables.filter(v => v.scope === 'variable'),
+            variables: variables.filter(v => v.scope === 'global_variable' || v.scope === 'local_variable'),
           }
         }
       }

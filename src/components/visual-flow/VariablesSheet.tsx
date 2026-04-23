@@ -27,7 +27,7 @@ export type Variable = {
     id: string;
     name: string;
     type: 'String' | 'Number' | 'Boolean' | 'Address';
-    scope: 'constant' | 'input' | 'state' | 'variable';
+    scope: 'constant' | 'input' | 'state' | 'global_variable' | 'local_variable';
     value?: string;
     isDeletable?: boolean;
     metadata?: any;
@@ -85,7 +85,7 @@ export default function VariablesSheet({ open, onOpenChange, variables, setVaria
     const [isAdding, setIsAdding] = useState(false);
     const [newVarName, setNewVarName] = useState('');
     const [newVarType, setNewVarType] = useState<'String' | 'Number' | 'Boolean' | 'Address'>('String');
-    const [newVarScope, setNewVarScope] = useState<'constant' | 'input' | 'variable'>('constant');
+    const [newVarScope, setNewVarScope] = useState<'constant' | 'input' | 'global_variable' | 'local_variable'>('constant');
     const [newVarValue, setNewVarValue] = useState('');
 
     const addVariable = () => {
@@ -95,7 +95,7 @@ export default function VariablesSheet({ open, onOpenChange, variables, setVaria
             name: newVarName.trim(),
             type: newVarType,
             scope: newVarScope,
-            value: newVarScope === 'constant' || newVarScope === 'variable' ? newVarValue : undefined,
+            value: newVarScope === 'constant' || newVarScope === 'global_variable' || newVarScope === 'local_variable' ? newVarValue : undefined,
             isDeletable: true,
         };
         setVariables([...variables, newVariable]);
@@ -165,7 +165,8 @@ export default function VariablesSheet({ open, onOpenChange, variables, setVaria
                                     <SelectContent>
                                         <SelectItem value="constant">Constant</SelectItem>
                                         <SelectItem value="input">Input</SelectItem>
-                                        <SelectItem value="variable">Variable</SelectItem>
+                                        <SelectItem value="global_variable">Global Variable</SelectItem>
+                                        <SelectItem value="local_variable">Local Variable</SelectItem>
                                     </SelectContent>
                                 </Select>
                             </div>
@@ -175,7 +176,7 @@ export default function VariablesSheet({ open, onOpenChange, variables, setVaria
                                     <Input id="var-value" value={newVarValue} onChange={(e) => setNewVarValue(e.target.value)} placeholder="Enter constant value" className="h-8 text-xs" />
                                 </div>
                             )}
-                            {newVarScope === 'variable' && (
+                            {(newVarScope === 'global_variable' || newVarScope === 'local_variable') && (
                                 <div className="space-y-1">
                                     <Label htmlFor="var-initial-value" className="text-xs">Initial Value</Label>
                                     <Input id="var-initial-value" value={newVarValue} onChange={(e) => setNewVarValue(e.target.value)} placeholder="Enter initial value" className="h-8 text-xs" />
@@ -224,8 +225,8 @@ export default function VariablesSheet({ open, onOpenChange, variables, setVaria
                                             <div>
                                                 <p className="font-mono text-sm font-medium">{v.name}</p>
                                                 <p className="text-xs text-muted-foreground">
-                                                    {v.type} - <span className="capitalize">{v.scope}</span>
-                                                    {(v.scope === 'constant' || v.scope === 'variable') && v.value && <span className="font-mono text-xs"> = {v.value}</span>}
+                                                    {v.type} - <span className="capitalize">{v.scope.replace('_', ' ')}</span>
+                                                    {(v.scope === 'constant' || v.scope === 'global_variable' || v.scope === 'local_variable') && v.value && <span className="font-mono text-xs"> = {v.value}</span>}
                                                 </p>
                                             </div>
                                         </div>
