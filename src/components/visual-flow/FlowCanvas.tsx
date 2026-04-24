@@ -265,6 +265,14 @@ const Flow = ({ projectName, initialNodes = [], initialEdges = [], initialVariab
       return false;
     }
 
+    const sourceHandleHasConnection = edges.some(
+      (edge) => edge.source === connection.source && edge.sourceHandle === connection.sourceHandle
+    );
+
+    if (sourceHandleHasConnection) {
+      return false;
+    }
+
     const sourceHandleType = connection.sourceHandle?.split('-')[0];
     const targetHandleType = connection.targetHandle?.split('-')[0];
 

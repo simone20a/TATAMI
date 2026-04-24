@@ -142,7 +142,7 @@ const blockDescriptions = [
                         </ul>
                         <p className="mt-2 mb-2"><strong>Outputs:</strong></p>
                         <ul className="list-disc pl-5 space-y-1">
-                            <li>`Stream`: The token stream containing the newly created tokens.</li>
+                            <li>`Stream`: The token stream containing the tokens that were given as input to the block, without alterations.</li>
                             <li>`Minted`: A new stream containing only the newly minted tokens.</li>
                         </ul>
                         <p className="mt-2 mb-2"><strong>Fields:</strong></p>
