@@ -85,18 +85,32 @@ function SetNode({ id, data, isConnectable }: NodeProps<SetNodeData>) {
                             />
                             <div className="text-xs">Stream</div>
                         </div>
-                        {selectedVariableData && (
+                 {selectedVariableData && (
+                    <>
+                        <div className="relative flex items-center h-8">
+                            <Handle
+                                type="target"
+                                position={Position.Left}
+                                id={`${selectedVariableData.type.toLowerCase()}-value`}
+                                style={{ ...typeToStyle[selectedVariableData.type], left: '-22px' }}
+                                isConnectable={isConnectable}
+                            />
+                            <div className="text-xs">Value</div>
+                        </div>
+                        {selectedVariableData.scope === 'state' && selectedVariableData.metadata?.inputType === 'Number' && (
                             <div className="relative flex items-center h-8">
                                 <Handle
                                     type="target"
                                     position={Position.Left}
-                                    id={`${selectedVariableData.type.toLowerCase()}-value`}
-                                    style={{ ...typeToStyle[selectedVariableData.type], left: '-22px' }}
+                                    id="number-token-id"
+                                    style={{ ...typeToStyle['Number'], left: '-22px' }}
                                     isConnectable={isConnectable}
                                 />
-                                <div className="text-xs">Value</div>
+                                <div className="text-xs">Token ID</div>
                             </div>
                         )}
+                    </>
+                )}
                     </div>
                     {/* Output Column */}
                     <div className="flex flex-col space-y-2 items-end justify-center">

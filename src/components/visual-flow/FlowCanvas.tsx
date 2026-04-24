@@ -182,6 +182,9 @@ const getNodeHandles = (node: Node, allVariables: Variable[], allPools: any[], a
       const variable = allVariables.find((v: any) => v.name === data.selectedVariable);
       if (variable) {
         handles.target.push(`${variable.type.toLowerCase()}-value`);
+        if (variable.scope === 'state' && variable.metadata?.inputType === 'Number') {
+          handles.target.push('number-token-id');
+        }
       }
       handles.source.push('output-stream');
       break;
@@ -802,7 +805,7 @@ const Flow = ({ projectName, initialNodes = [], initialEdges = [], initialVariab
           ...node,
           data: {
             ...node.data,
-            variables: variables.filter(v => v.scope === 'global_variable' || v.scope === 'local_variable'),
+            variables: variables.filter(v => v.scope === 'global_variable' || v.scope === 'local_variable' || (v.scope === 'state' && v.metadata?.inputType === 'Number')),
           }
         }
       }
