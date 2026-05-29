@@ -44,12 +44,6 @@ Before you begin, ensure you have the following installed on your machine:
 ```text
 TATAMI
 ├── examples/                  # Case studies and Solidity translations
-│   ├── AMM.xml
-│   ├── AMM_translation/
-│   ├── Auction.xml
-│   ├── Auction_translation/
-│   ├── CaseStudy.xml
-│   └── CaseStudy_translation/
 ├── src/                       # Source code
 │   ├── app/
 │   ├── components/
