@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model>
+    <nodes>
+        <node id="0" type="fungibleTokenNode" x="-497.9200271029277" y="-147.67223560011513">
+            <data><![CDATA[{"label":"Fungible Token","name":"SarafuToken","symbol":"ST"}]]></data>
+        </node>
+        <node id="1" type="poolNode" x="-197.38927286858006" y="-146.03075423434765">
+            <data><![CDATA[{"label":"Pool","name":"CommunityToken","keys":[],"allTokens":[{"name":"SarafuToken","type":"Fungible"},{"name":"utenteAttivo","type":"Non-Fungible"}],"selectedToken":"SarafuToken"}]]></data>
+        </node>
+        <node id="2" type="entryNode" x="-525.9184399555581" y="271.7707707009461">
+            <data><![CDATA[{"label":"Entry","name":"userOnboardingEndowment","tokenSelections":[{"id":0,"selectedToken":"SarafuToken"}],"tokens":[{"name":"SarafuToken","type":"Fungible"},{"name":"utenteAttivo","type":"Non-Fungible"}]}]]></data>
+        </node>
+        <node id="3" type="numberNode" x="-850.3012073153266" y="406.2125683985769">
+            <data><![CDATA[{"label":"number","value":"0"}]]></data>
+        </node>
+        <node id="5" type="numberNode" x="-467.49591064923425" y="540.6681457617578">
+            <data><![CDATA[{"label":"number","value":"startQuantity"}]]></data>
+        </node>
+        <node id="7" type="transferNode" x="270.01486941438225" y="496.0286523422491">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="8" type="addressNode" x="-88.4970245500968" y="627.8874980224637">
+            <data><![CDATA[{"label":"address","value":"Sender"}]]></data>
+        </node>
+        <node id="9" type="poolNode" x="108.7084485561511" y="-143.78508500387943">
+            <data><![CDATA[{"label":"Pool","name":"EndowmentPool","keys":[],"allTokens":[{"name":"SarafuToken","type":"Fungible"},{"name":"utenteAttivo","type":"Non-Fungible"}],"selectedToken":"SarafuToken"}]]></data>
+        </node>
+        <node id="10" type="withdrawNode" x="-129.7635652784356" y="374.88349587148036">
+            <data><![CDATA[{"label":"Withdraw","pools":[{"label":"Pool","name":"CommunityToken","keys":[],"allTokens":[{"name":"SarafuToken","type":"Fungible"},{"name":"utenteAttivo","type":"Non-Fungible"}],"selectedToken":"SarafuToken","tokenType":"Fungible"},{"label":"Pool","name":"EndowmentPool","keys":[],"allTokens":[{"name":"SarafuToken","type":"Fungible"},{"name":"utenteAttivo","type":"Non-Fungible"}],"selectedToken":"SarafuToken","tokenType":"Fungible"}],"selectedPool":"EndowmentPool"}]]></data>
+        </node>
+        <node id="12" type="entryNode" x="-543.6766919207537" y="1439.5283035975742">
+            <data><![CDATA[{"label":"Entry","name":"P2PPurchaseWithCommunityFee","tokenSelections":[{"id":0,"selectedToken":"SarafuToken"}],"tokens":[{"name":"SarafuToken","type":"Fungible"},{"name":"utenteAttivo","type":"Non-Fungible"}]}]]></data>
+        </node>
+        <node id="13" type="numberNode" x="-860.8320284652759" y="1573.1498205191638">
+            <data><![CDATA[{"label":"number","value":"sarafuAmount"}]]></data>
+        </node>
+        <node id="19" type="entryNode" x="-565.5771831640403" y="2622.282325181365">
+            <data><![CDATA[{"label":"Entry","name":"communityInfrastructureMaintenance","tokenSelections":[{"id":0,"selectedToken":"SarafuToken"}],"tokens":[{"name":"SarafuToken","type":"Fungible"},{"name":"utenteAttivo","type":"Non-Fungible"}]}]]></data>
+        </node>
+        <node id="20" type="splitNode" x="-140.33932008426405" y="1537.524672210521">
+            <data><![CDATA[{"label":"Split"}]]></data>
+        </node>
+        <node id="21" type="numberNode" x="-477.91073988711514" y="1706.2574518122146">
+            <data><![CDATA[{"label":"number","value":"98"}]]></data>
+        </node>
+        <node id="22" type="numberNode" x="-477.3934015676373" y="1823.1044065884253">
+            <data><![CDATA[{"label":"number","value":"2"}]]></data>
+        </node>
+        <node id="23" type="transferNode" x="978.2734676219573" y="1461.9129162777708">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="24" type="addressNode" x="663.8197135925195" y="1509.803631587148">
+            <data><![CDATA[{"label":"address","value":"sellerAddress"}]]></data>
+        </node>
+        <node id="25" type="depositNode" x="292.1026348353555" y="1783.7462968868185">
+            <data><![CDATA[{"label":"Deposit","pools":[{"label":"Pool","name":"CommunityToken","keys":[],"allTokens":[{"name":"SarafuToken","type":"Fungible"},{"name":"utenteAttivo","type":"Non-Fungible"}],"selectedToken":"SarafuToken","tokenType":"Fungible"},{"label":"Pool","name":"EndowmentPool","keys":[],"allTokens":[{"name":"SarafuToken","type":"Fungible"},{"name":"utenteAttivo","type":"Non-Fungible"}],"selectedToken":"SarafuToken","tokenType":"Fungible"}],"selectedPool":"CommunityToken"}]]></data>
+        </node>
+        <node id="26" type="numberNode" x="-905.8351885762461" y="2762.9184262437057">
+            <data><![CDATA[{"label":"number","value":"0"}]]></data>
+        </node>
+        <node id="35" type="transferNode" x="305.3112079805196" y="2766.3672430135553">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="36" type="addressNode" x="-90.53392334165608" y="2909.8801934674034">
+            <data><![CDATA[{"label":"address","value":"sellerAddress"}]]></data>
+        </node>
+        <node id="37" type="entryNode" x="-552.0489558266693" y="2077.122651379171">
+            <data><![CDATA[{"label":"Entry","name":"infrastructureRepairPricing","tokenSelections":[{"id":0,"selectedToken":"SarafuToken"}],"tokens":[{"name":"SarafuToken","type":"Fungible"},{"name":"utenteAttivo","type":"Non-Fungible"}]}]]></data>
+        </node>
+        <node id="38" type="numberNode" x="-855.9530191396195" y="2218.0976552809393">
+            <data><![CDATA[{"label":"number","value":"0"}]]></data>
+        </node>
+        <node id="39" type="setNode" x="-158.01761127349806" y="2096.6981154307514">
+            <data><![CDATA[{"label":"Set","variables":[{"id":"9adfbf46-bac3-433e-a55f-a2326667ed9a","name":"sarafuAmount","type":"Number","scope":"local_variable","value":"0","isDeletable":true},{"id":"889b9386-55d0-4063-a33c-911fbb5a6abb","name":"repairPrice","type":"Number","scope":"local_variable","value":"0","isDeletable":true}],"selectedVariable":"repairPrice"}]]></data>
+        </node>
+        <node id="40" type="numberNode" x="-498.6007730153102" y="2343.4085584127843">
+            <data><![CDATA[{"label":"number","value":"price"}]]></data>
+        </node>
+        <node id="45" type="entryNode" x="-578.0159472691739" y="3269.858815699932">
+            <data><![CDATA[{"label":"Entry","name":"activeParticipationLoyaltyReward","tokenSelections":[{"id":0,"selectedToken":"utenteAttivo"}],"tokens":[{"name":"SarafuToken","type":"Fungible"},{"name":"utenteAttivo","type":"Non-Fungible"}]}]]></data>
+        </node>
+        <node id="46" type="numberNode" x="-906.8159472691738" y="3410.858815699932">
+            <data><![CDATA[{"label":"number","value":"idadd"}]]></data>
+        </node>
+        <node id="52" type="transferNode" x="231.77894582531735" y="3465.9003550489956">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="53" type="addressNode" x="-134.39279179019593" y="3538.4549892438145">
+            <data><![CDATA[{"label":"address","value":"recipientAddress"}]]></data>
+        </node>
+        <node id="54" type="entryNode" x="-549.0561172831606" y="3919.556313701128">
+            <data><![CDATA[{"label":"Entry","name":"percentageBasedFee","tokenSelections":[{"id":0,"selectedToken":"SarafuToken"}],"tokens":[{"name":"SarafuToken","type":"Fungible"},{"name":"utenteAttivo","type":"Non-Fungible"}]}]]></data>
+        </node>
+        <node id="55" type="numberNode" x="-887.9873803050593" y="4057.013638966133">
+            <data><![CDATA[{"label":"number","value":"SarafuToken_balanceOf(recipientAddress)*0.02"}]]></data>
+        </node>
+        <node id="56" type="depositNode" x="-110.38511663416719" y="4011.3015888255186">
+            <data><![CDATA[{"label":"Deposit","pools":[{"label":"Pool","name":"CommunityToken","keys":[],"allTokens":[{"name":"SarafuToken","type":"Fungible"},{"name":"utenteAttivo","type":"Non-Fungible"}],"selectedToken":"SarafuToken","tokenType":"Fungible"},{"label":"Pool","name":"EndowmentPool","keys":[],"allTokens":[{"name":"SarafuToken","type":"Fungible"},{"name":"utenteAttivo","type":"Non-Fungible"}],"selectedToken":"SarafuToken","tokenType":"Fungible"}],"selectedPool":"EndowmentPool"}]]></data>
+        </node>
+        <node id="57" type="entryNode" x="-521.8397757588311" y="869.4914423658929">
+            <data><![CDATA[{"label":"Entry","name":"P2PCommercialPricing","tokenSelections":[{"id":0,"selectedToken":"SarafuToken"}],"tokens":[{"name":"SarafuToken","type":"Fungible"},{"name":"utenteAttivo","type":"Non-Fungible"}]}]]></data>
+        </node>
+        <node id="58" type="numberNode" x="-845.8397757588311" y="1009.4914423658929">
+            <data><![CDATA[{"label":"number","value":"0"}]]></data>
+        </node>
+        <node id="59" type="setNode" x="-97.83977575883114" y="897.4914423658929">
+            <data><![CDATA[{"label":"Set","variables":[{"id":"9adfbf46-bac3-433e-a55f-a2326667ed9a","name":"sarafuAmount","type":"Number","scope":"local_variable","value":"0","isDeletable":true},{"id":"889b9386-55d0-4063-a33c-911fbb5a6abb","name":"repairPrice","type":"Number","scope":"local_variable","value":"0","isDeletable":true}],"selectedVariable":"sarafuAmount"}]]></data>
+        </node>
+        <node id="60" type="numberNode" x="-465.83977575883114" y="1145.491442365893">
+            <data><![CDATA[{"label":"number","value":"amount"}]]></data>
+        </node>
+        <node id="61" type="burnNode" x="270.21684593156283" y="988.451403303393">
+            <data><![CDATA[{"label":"Burn"}]]></data>
+        </node>
+        <node id="63" type="nonFungibleTokenNode" x="300.21684593156283" y="1251.3309931471438">
+            <data><![CDATA[{"label":"Non-Fungible Token","name":"utenteAttivo","attributes":[]}]]></data>
+        </node>
+        <node id="64" type="mintNode" x="298.21684593156283" y="1399.3309931471438">
+            <data><![CDATA[{"label":"Mint","allTokens":[{"name":"SarafuToken","type":"Fungible"},{"name":"utenteAttivo","type":"Non-Fungible"}],"nftData":[{"label":"Non-Fungible Token","name":"utenteAttivo","attributes":[]}],"selectedToken":"utenteAttivo"}]]></data>
+        </node>
+        <node id="65" type="transferNode" x="988.2168459315628" y="1659.3309931471438">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="66" type="addressNode" x="662.2168459315628" y="1711.3309931471438">
+            <data><![CDATA[{"label":"address","value":"Sender"}]]></data>
+        </node>
+        <node id="67" type="burnNode" x="204.21684593156283" y="2183.330993147144">
+            <data><![CDATA[{"label":"Burn"}]]></data>
+        </node>
+        <node id="68" type="mintNode" x="-161.78315406843717" y="3283.330993147144">
+            <data><![CDATA[{"label":"Mint","allTokens":[{"name":"SarafuToken","type":"Fungible"},{"name":"utenteAttivo","type":"Non-Fungible"}],"nftData":[{"label":"Non-Fungible Token","name":"utenteAttivo","attributes":[]}],"selectedToken":"SarafuToken"}]]></data>
+        </node>
+        <node id="69" type="numberNode" x="-517.7831540684372" y="3541.330993147144">
+            <data><![CDATA[{"label":"number","value":"30"}]]></data>
+        </node>
+        <node id="70" type="burnNode" x="230.21684593156283" y="3293.330993147144">
+            <data><![CDATA[{"label":"Burn"}]]></data>
+        </node>
+        <node id="71" type="withdrawNode" x="-119.57515468399089" y="2649.371909428872">
+            <data><![CDATA[{"label":"Withdraw","pools":[{"label":"Pool","name":"CommunityToken","keys":[],"allTokens":[{"name":"SarafuToken","type":"Fungible"},{"name":"utenteAttivo","type":"Non-Fungible"}],"selectedToken":"SarafuToken","tokenType":"Fungible"},{"label":"Pool","name":"EndowmentPool","keys":[],"allTokens":[{"name":"SarafuToken","type":"Fungible"},{"name":"utenteAttivo","type":"Non-Fungible"}],"selectedToken":"SarafuToken","tokenType":"Fungible"}],"selectedPool":"CommunityToken"}]]></data>
+        </node>
+        <node id="72" type="numberNode" x="-500.92102658905355" y="2892.5686875011165">
+            <data><![CDATA[{"label":"number","value":"repairPrice"}]]></data>
+        </node>
+        <node id="73" type="burnNode" x="306.6808581804112" y="2586.2017281954363">
+            <data><![CDATA[{"label":"Burn"}]]></data>
+        </node>
+        <node id="74" type="burnNode" x="266.69240873314357" y="369.4914423658929">
+            <data><![CDATA[{"label":"Burn"}]]></data>
+        </node>
+    </nodes>
+    <edges>
+        <edge id="reactflow__edge-3number-2number-quantity-0" source="3" target="2" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-8address-7address-recipient" source="8" target="7" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-2output-stream-0-10input-stream" source="2" target="10" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-5number-10number-amount" source="5" target="10" sourceHandle="number" targetHandle="number-amount"/>
+        <edge id="reactflow__edge-13number-12number-quantity-0" source="13" target="12" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-21number-20number-branch1" source="21" target="20" sourceHandle="number" targetHandle="number-branch1"/>
+        <edge id="reactflow__edge-22number-20number-branch2" source="22" target="20" sourceHandle="number" targetHandle="number-branch2"/>
+        <edge id="reactflow__edge-24address-23address-recipient" source="24" target="23" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-20output2-25input-stream" source="20" target="25" sourceHandle="output2" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-26number-19number-quantity-0" source="26" target="19" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-36address-35address-recipient" source="36" target="35" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-38number-37number-quantity-0" source="38" target="37" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-37output-stream-0-39input-stream" source="37" target="39" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-40number-39number-value" source="40" target="39" sourceHandle="number" targetHandle="number-value"/>
+        <edge id="reactflow__edge-46number-45number-quantity-0" source="46" target="45" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-53address-52address-recipient" source="53" target="52" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-55number-54number-quantity-0" source="55" target="54" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-54output-stream-0-56input-stream" source="54" target="56" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-57output-stream-0-59input-stream" source="57" target="59" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-60number-59number-value" source="60" target="59" sourceHandle="number" targetHandle="number-value"/>
+        <edge id="reactflow__edge-58number-57number-quantity-0" source="58" target="57" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-59output-stream-61to-burn" source="59" target="61" sourceHandle="output-stream" targetHandle="to-burn"/>
+        <edge id="reactflow__edge-12output-stream-0-20input-stream" source="12" target="20" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-20output1-64input-stream" source="20" target="64" sourceHandle="output1" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-64output-23input-stream" source="64" target="23" sourceHandle="output" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-64minted-output-65input-stream" source="64" target="65" sourceHandle="minted-output" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-66address-65address-recipient" source="66" target="65" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-39output-stream-67to-burn" source="39" target="67" sourceHandle="output-stream" targetHandle="to-burn"/>
+        <edge id="reactflow__edge-45output-stream-0-68input-stream" source="45" target="68" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-69number-68number-quantity" source="69" target="68" sourceHandle="number" targetHandle="number-quantity"/>
+        <edge id="reactflow__edge-68minted-output-52input-stream" source="68" target="52" sourceHandle="minted-output" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-68output-70to-burn" source="68" target="70" sourceHandle="output" targetHandle="to-burn"/>
+        <edge id="reactflow__edge-19output-stream-0-71input-stream" source="19" target="71" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-72number-71number-amount" source="72" target="71" sourceHandle="number" targetHandle="number-amount"/>
+        <edge id="reactflow__edge-71withdrawn-stream-35input-stream" source="71" target="35" sourceHandle="withdrawn-stream" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-71output-stream-73to-burn" source="71" target="73" sourceHandle="output-stream" targetHandle="to-burn"/>
+        <edge id="reactflow__edge-10output-stream-74to-burn" source="10" target="74" sourceHandle="output-stream" targetHandle="to-burn"/>
+        <edge id="reactflow__edge-10withdrawn-stream-7input-stream" source="10" target="7" sourceHandle="withdrawn-stream" targetHandle="input-stream"/>
+    </edges>
+    <variables>
+        <variable id="global-sender" name="Sender" type="Address" scope="state"/>
+        <variable id="global-blocknumber" name="BlockNumber" type="Number" scope="state"/>
+        <variable id="54c090c1-fd44-4872-bc05-574a9d739307" name="startQuantity" type="Number" scope="constant" value="50"/>
+        <variable id="c60bf9a6-8060-4fb2-a1eb-fc6eae519cae" name="recipientAddress" type="Address" scope="input"/>
+        <variable id="e7095887-8009-4756-84fc-51a65ffdc1f6" name="price" type="Number" scope="input"/>
+        <variable id="28c5e7ee-37dc-4876-91ec-8021c274a49a" name="amount" type="Number" scope="input"/>
+        <variable id="70927973-2ba0-4f62-8b3d-b0c21aa9a814" name="idadd" type="Number" scope="input"/>
+        <variable id="d43028f1-433f-4033-a697-116d7371dcbd" name="sellerAddress" type="Address" scope="input"/>
+        <variable id="9adfbf46-bac3-433e-a55f-a2326667ed9a" name="sarafuAmount" type="Number" scope="local_variable" value="0"/>
+        <variable id="889b9386-55d0-4063-a33c-911fbb5a6abb" name="repairPrice" type="Number" scope="local_variable" value="0"/>
+        <variable id="state-var-ts-0" name="SarafuToken_TotalSupply" type="Number" scope="state"/>
+        <variable id="state-var-bof-0" name="SarafuToken_balanceOf" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Address&quot;}"/>
+        <variable id="state-var-amount-1" name="CommunityToken_amount" type="Number" scope="state"/>
+        <variable id="state-var-amount-9" name="EndowmentPool_amount" type="Number" scope="state"/>
+    </variables>
+</model>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model>
+    <nodes>
+        <node id="0" type="fungibleTokenNode" x="-727.0176434332043" y="-137.90293779795235">
+            <data><![CDATA[{"label":"Fungible Token","name":"GST","symbol":"GST"}]]></data>
+        </node>
+        <node id="1" type="fungibleTokenNode" x="-399.1362955411748" y="-134.8503986411405">
+            <data><![CDATA[{"label":"Fungible Token","name":"GMT","symbol":"GMT"}]]></data>
+        </node>
+        <node id="2" type="nonFungibleTokenNode" x="-64.29806587792095" y="-130.55760082494493">
+            <data><![CDATA[{"label":"Non-Fungible Token","name":"Sneaker","attributes":[{"id":0,"name":"Efficiency","type":"Number"},{"id":1,"name":"Comfort","type":"Number"},{"id":2,"name":"Durability","type":"Number"},{"id":3,"name":"HP","type":"Number"},{"id":4,"name":"Level","type":"Number"},{"id":5,"name":"type","type":"Number"}]}]]></data>
+        </node>
+        <node id="3" type="entryNode" x="-738.6732981122396" y="701.5857513955477">
+            <data><![CDATA[{"label":"Entry","name":"rewardsMovement","tokenSelections":[{"id":0,"selectedToken":"GST"}],"tokens":[{"name":"GST","type":"Fungible"},{"name":"GMT","type":"Fungible"},{"name":"Sneaker","type":"Non-Fungible"}]}]]></data>
+        </node>
+        <node id="4" type="numberNode" x="-1052.365310311368" y="803.3803335569844">
+            <data><![CDATA[{"label":"number","value":"0"}]]></data>
+        </node>
+        <node id="5" type="ifNode" x="-307.52074591913754" y="712.1606867496636">
+            <data><![CDATA[{"label":"If"}]]></data>
+        </node>
+        <node id="6" type="booleanNode" x="-654.8896695914391" y="581.9595623986764">
+            <data><![CDATA[{"label":"boolean","value":"SMAC==true && Sneaker_Durability(dur)>0"}]]></data>
+        </node>
+        <node id="7" type="exceptionNode" x="32.59146487767353" y="936.9600635177054">
+            <data><![CDATA[{"label":"Exception"}]]></data>
+        </node>
+        <node id="8" type="mintNode" x="95.29774013507227" y="685.1383062319163">
+            <data><![CDATA[{"label":"Mint","allTokens":[{"name":"GST","type":"Fungible"},{"name":"GMT","type":"Fungible"},{"name":"Sneaker","type":"Non-Fungible"}],"nftData":[{"label":"Non-Fungible Token","name":"Sneaker","attributes":[{"id":0,"name":"Efficiency","type":"Number"},{"id":1,"name":"Comfort","type":"Number"},{"id":2,"name":"Durability","type":"Number"},{"id":3,"name":"HP","type":"Number"},{"id":4,"name":"Level","type":"Number"},{"id":5,"name":"type","type":"Number"}]}],"selectedToken":"GST"}]]></data>
+        </node>
+        <node id="9" type="numberNode" x="-251.84229401004416" y="598.3063173548151">
+            <data><![CDATA[{"label":"number","value":"(energia*Sneaker_Efficiency(eff))*(Sneaker_Durability(dur)/100)*Sneaker_type(tipoSneaker)"}]]></data>
+        </node>
+        <node id="10" type="joinNode" x="478.03250258251376" y="603.2713983546685">
+            <data><![CDATA[{"label":"Join"}]]></data>
+        </node>
+        <node id="11" type="transferNode" x="1183.2773944350165" y="745.3266039506807">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="12" type="addressNode" x="840.6728609909884" y="915.8661195782604">
+            <data><![CDATA[{"label":"address","value":"userWallet"}]]></data>
+        </node>
+        <node id="15" type="setNode" x="812.9557228773597" y="663.8236688030651">
+            <data><![CDATA[{"label":"Set","variables":[{"id":"34fcfa8f-efc3-4572-87df-d9f44d59a893","name":"repairPrice","type":"Number","scope":"local_variable","value":"0","isDeletable":true},{"id":"state-var-attr-2-0","name":"Sneaker_Efficiency","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}},{"id":"state-var-attr-2-1","name":"Sneaker_Comfort","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}},{"id":"state-var-attr-2-2","name":"Sneaker_Durability","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}},{"id":"state-var-attr-2-3","name":"Sneaker_HP","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}},{"id":"state-var-attr-2-4","name":"Sneaker_Level","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}},{"id":"state-var-attr-2-5","name":"Sneaker_type","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}}],"selectedVariable":"Sneaker_Durability"}]]></data>
+        </node>
+        <node id="16" type="entryNode" x="-1374.1720117157095" y="2070.2352746588394">
+            <data><![CDATA[{"label":"Entry","name":"repair","tokenSelections":[{"id":0,"selectedToken":"GST"}],"tokens":[{"name":"GST","type":"Fungible"},{"name":"GMT","type":"Fungible"},{"name":"Sneaker","type":"Non-Fungible"}]}]]></data>
+        </node>
+        <node id="17" type="numberNode" x="-1675.670520844282" y="2208.0247039061956">
+            <data><![CDATA[{"label":"number","value":"repairPrice"}]]></data>
+        </node>
+        <node id="19" type="setNode" x="-977.0532240009072" y="2063.5120695016158">
+            <data><![CDATA[{"label":"Set","variables":[{"id":"34fcfa8f-efc3-4572-87df-d9f44d59a893","name":"repairPrice","type":"Number","scope":"local_variable","value":"0","isDeletable":true},{"id":"state-var-attr-2-0","name":"Sneaker_Efficiency","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}},{"id":"state-var-attr-2-1","name":"Sneaker_Comfort","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}},{"id":"state-var-attr-2-2","name":"Sneaker_Durability","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}},{"id":"state-var-attr-2-3","name":"Sneaker_HP","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}},{"id":"state-var-attr-2-4","name":"Sneaker_Level","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}},{"id":"state-var-attr-2-5","name":"Sneaker_type","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}}],"selectedVariable":"Sneaker_Durability"}]]></data>
+        </node>
+        <node id="20" type="numberNode" x="-1313.7834286684044" y="2330.3163135805726">
+            <data><![CDATA[{"label":"number","value":"100"}]]></data>
+        </node>
+        <node id="21" type="entryNode" x="-1343.7252446446478" y="2711.8397587193267">
+            <data><![CDATA[{"label":"Entry","name":"sneakerUpgradeAndEnhancement","tokenSelections":[{"id":0,"selectedToken":"GST"},{"id":1,"selectedToken":"GMT"},{"id":2,"selectedToken":"Sneaker"},{"id":3,"selectedToken":"Sneaker"}],"tokens":[{"name":"GST","type":"Fungible"},{"name":"GMT","type":"Fungible"},{"name":"Sneaker","type":"Non-Fungible"}]}]]></data>
+        </node>
+        <node id="22" type="numberNode" x="-1705.2071297664324" y="2851.667977315854">
+            <data><![CDATA[{"label":"number","value":"costoGST"}]]></data>
+        </node>
+        <node id="23" type="numberNode" x="-1701.2154417698262" y="2971.4934252445837">
+            <data><![CDATA[{"label":"number","value":"costoGMT"}]]></data>
+        </node>
+        <node id="26" type="numberNode" x="485.38050056553135" y="773.0002024797203">
+            <data><![CDATA[{"label":"number","value":"dur-10"}]]></data>
+        </node>
+        <node id="30" type="burnNode" x="-923.3008455771234" y="2806.992273978879">
+            <data><![CDATA[{"label":"Burn"}]]></data>
+        </node>
+        <node id="36" type="burnNode" x="-922.7310481575518" y="2932.017211666159">
+            <data><![CDATA[{"label":"Burn"}]]></data>
+        </node>
+        <node id="39" type="burnNode" x="-916.3602757143385" y="3055.7802059001197">
+            <data><![CDATA[{"label":"Burn"}]]></data>
+        </node>
+        <node id="40" type="mintNode" x="-915.2216520542214" y="3187.1408076855905">
+            <data><![CDATA[{"label":"Mint","allTokens":[{"name":"GST","type":"Fungible"},{"name":"GMT","type":"Fungible"},{"name":"Sneaker","type":"Non-Fungible"}],"nftData":[{"label":"Non-Fungible Token","name":"Sneaker","attributes":[{"id":0,"name":"Efficiency","type":"Number"},{"id":1,"name":"Comfort","type":"Number"},{"id":2,"name":"Durability","type":"Number"},{"id":3,"name":"HP","type":"Number"},{"id":4,"name":"Level","type":"Number"},{"id":5,"name":"type","type":"Number"}]}],"selectedToken":"Sneaker"}]]></data>
+        </node>
+        <node id="41" type="numberNode" x="-1280.3490526442365" y="3337.2576351441217">
+            <data><![CDATA[{"label":"number","value":"neweff"}]]></data>
+        </node>
+        <node id="42" type="numberNode" x="-1270.5778988559696" y="3475.653307309325">
+            <data><![CDATA[{"label":"number","value":"newcom"}]]></data>
+        </node>
+        <node id="43" type="numberNode" x="-1274.4062641971698" y="3618.1634025803965">
+            <data><![CDATA[{"label":"number","value":"newdur"}]]></data>
+        </node>
+        <node id="44" type="numberNode" x="-1272.3490526442365" y="3764.673497851467">
+            <data><![CDATA[{"label":"number","value":"newHP"}]]></data>
+        </node>
+        <node id="45" type="numberNode" x="-1266.4062641971698" y="3889.183593122538">
+            <data><![CDATA[{"label":"number","value":"newlev"}]]></data>
+        </node>
+        <node id="46" type="numberNode" x="-1260.8067450677026" y="4024.6799735481773">
+            <data><![CDATA[{"label":"number","value":"newtype"}]]></data>
+        </node>
+        <node id="47" type="burnNode" x="-418.2634817703417" y="3369.4220567449283">
+            <data><![CDATA[{"label":"Burn"}]]></data>
+        </node>
+        <node id="48" type="transferNode" x="-425.46492438194025" y="3506.845132510267">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="49" type="addressNode" x="-873.1668448539524" y="3641.9821505109394">
+            <data><![CDATA[{"label":"address","value":"userWallet"}]]></data>
+        </node>
+        <node id="50" type="entryNode" x="-1402.4236320063783" y="1499.2707137653158">
+            <data><![CDATA[{"label":"Entry","name":"dynamicSneakerRepairCostGovernance","tokenSelections":[{"id":0,"selectedToken":"GST"}],"tokens":[{"name":"GST","type":"Fungible"},{"name":"GMT","type":"Fungible"},{"name":"Sneaker","type":"Non-Fungible"}]}]]></data>
+        </node>
+        <node id="51" type="numberNode" x="-1701.9919282813116" y="1631.328431253086">
+            <data><![CDATA[{"label":"number","value":"0"}]]></data>
+        </node>
+        <node id="52" type="setNode" x="-983.4281622469144" y="1532.7524955111332">
+            <data><![CDATA[{"label":"Set","variables":[{"id":"34fcfa8f-efc3-4572-87df-d9f44d59a893","name":"repairPrice","type":"Number","scope":"local_variable","value":"0","isDeletable":true},{"id":"state-var-attr-2-0","name":"Sneaker_Efficiency","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}},{"id":"state-var-attr-2-1","name":"Sneaker_Comfort","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}},{"id":"state-var-attr-2-2","name":"Sneaker_Durability","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}},{"id":"state-var-attr-2-3","name":"Sneaker_HP","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}},{"id":"state-var-attr-2-4","name":"Sneaker_Level","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}},{"id":"state-var-attr-2-5","name":"Sneaker_type","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}}],"selectedVariable":"repairPrice"}]]></data>
+        </node>
+        <node id="53" type="numberNode" x="-1351.3484531482563" y="1766.2958272269177">
+            <data><![CDATA[{"label":"number","value":"price"}]]></data>
+        </node>
+        <node id="54" type="burnNode" x="-641.2715836475826" y="1619.6199424112035">
+            <data><![CDATA[{"label":"Burn"}]]></data>
+        </node>
+        <node id="58" type="burnNode" x="-624.3660285820567" y="2173.936324212672">
+            <data><![CDATA[{"label":"Burn"}]]></data>
+        </node>
+        <node id="61" type="entryNode" x="-1527.2833022029868" y="1043.5922879640607">
+            <data><![CDATA[{"label":"Entry","name":"rewardsMovementLev30","tokenSelections":[{"id":0,"selectedToken":"GMT"}],"tokens":[{"name":"GST","type":"Fungible"},{"name":"GMT","type":"Fungible"},{"name":"Sneaker","type":"Non-Fungible"}]}]]></data>
+        </node>
+        <node id="62" type="numberNode" x="-1826.4443054610463" y="1189.990225728643">
+            <data><![CDATA[{"label":"number","value":"0"}]]></data>
+        </node>
+        <node id="63" type="ifNode" x="-1115.1412817570433" y="1115.199974914128">
+            <data><![CDATA[{"label":"If"}]]></data>
+        </node>
+        <node id="64" type="booleanNode" x="-1466.8145887784854" y="933.793834640624">
+            <data><![CDATA[{"label":"boolean","value":"SMAC==true && Sneaker_Durability(dur)>0&&Sneaker_Level(lev)==30"}]]></data>
+        </node>
+        <node id="65" type="exceptionNode" x="-793.702331447852" y="1248.8676572209204">
+            <data><![CDATA[{"label":"Exception"}]]></data>
+        </node>
+        <node id="66" type="mintNode" x="-461.12440761309455" y="1134.2953581008132">
+            <data><![CDATA[{"label":"Mint","allTokens":[{"name":"GST","type":"Fungible"},{"name":"GMT","type":"Fungible"},{"name":"Sneaker","type":"Non-Fungible"}],"nftData":[{"label":"Non-Fungible Token","name":"Sneaker","attributes":[{"id":0,"name":"Efficiency","type":"Number"},{"id":1,"name":"Comfort","type":"Number"},{"id":2,"name":"Durability","type":"Number"},{"id":3,"name":"HP","type":"Number"},{"id":4,"name":"Level","type":"Number"},{"id":5,"name":"type","type":"Number"}]}],"selectedToken":"GMT"}]]></data>
+        </node>
+        <node id="67" type="numberNode" x="-782.3977722327986" y="1056.488129111338">
+            <data><![CDATA[{"label":"number","value":"(energia*Sneaker_Efficiency(eff))*(Sneaker_Durability(dur)/100)*Sneaker_type(tipoSneaker)*Sneaker_Comfort(comfortSneaker)"}]]></data>
+        </node>
+        <node id="68" type="joinNode" x="-85.58187160829661" y="1158.1645870841687">
+            <data><![CDATA[{"label":"Join"}]]></data>
+        </node>
+        <node id="71" type="setNode" x="358.74834756084454" y="1104.6223334196739">
+            <data><![CDATA[{"label":"Set","variables":[{"id":"34fcfa8f-efc3-4572-87df-d9f44d59a893","name":"repairPrice","type":"Number","scope":"local_variable","value":"0","isDeletable":true},{"id":"state-var-attr-2-0","name":"Sneaker_Efficiency","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}},{"id":"state-var-attr-2-1","name":"Sneaker_Comfort","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}},{"id":"state-var-attr-2-2","name":"Sneaker_Durability","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}},{"id":"state-var-attr-2-3","name":"Sneaker_HP","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}},{"id":"state-var-attr-2-4","name":"Sneaker_Level","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}},{"id":"state-var-attr-2-5","name":"Sneaker_type","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}}],"selectedVariable":"Sneaker_Durability"}]]></data>
+        </node>
+        <node id="72" type="numberNode" x="-15.076236000697548" y="1322.3953180679189">
+            <data><![CDATA[{"label":"number","value":"dur-10"}]]></data>
+        </node>
+        <node id="73" type="transferNode" x="734.0242871493175" y="1201.387499104808">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="74" type="addressNode" x="389.746057757882" y="1368.480398554024">
+            <data><![CDATA[{"label":"address","value":"userWallet"}]]></data>
+        </node>
+        <node id="75" type="numberNode" x="486.41654448698523" y="898.6686448282376">
+            <data><![CDATA[{"label":"number","value":"id"}]]></data>
+        </node>
+        <node id="76" type="numberNode" x="-29.58345551301477" y="1444.6686448282376">
+            <data><![CDATA[{"label":"number","value":"id"}]]></data>
+        </node>
+        <node id="77" type="numberNode" x="-1313.583455513015" y="2464.6686448282376">
+            <data><![CDATA[{"label":"number","value":"id"}]]></data>
+        </node>
+        <node id="78" type="numberNode" x="-1701.0071299091392" y="3091.84949204858">
+            <data><![CDATA[{"label":"number","value":"id"}]]></data>
+        </node>
+        <node id="79" type="numberNode" x="-1699.0071299091392" y="3217.84949204858">
+            <data><![CDATA[{"label":"number","value":"0"}]]></data>
+        </node>
+    </nodes>
+    <edges>
+        <edge id="reactflow__edge-4number-3number-quantity-0" source="4" target="3" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-3output-stream-0-5input-stream" source="3" target="5" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-6boolean-5boolean-condition" source="6" target="5" sourceHandle="boolean" targetHandle="boolean-condition"/>
+        <edge id="reactflow__edge-5else-7input-stream" source="5" target="7" sourceHandle="else" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-9number-8number-quantity" source="9" target="8" sourceHandle="number" targetHandle="number-quantity"/>
+        <edge id="reactflow__edge-8output-10input1" source="8" target="10" sourceHandle="output" targetHandle="input1"/>
+        <edge id="reactflow__edge-8minted-output-10input2" source="8" target="10" sourceHandle="minted-output" targetHandle="input2"/>
+        <edge id="reactflow__edge-12address-11address-recipient" source="12" target="11" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-15output-stream-11input-stream" source="15" target="11" sourceHandle="output-stream" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-17number-16number-quantity-0" source="17" target="16" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-20number-19number-value" source="20" target="19" sourceHandle="number" targetHandle="number-value"/>
+        <edge id="reactflow__edge-16output-stream-0-19input-stream" source="16" target="19" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-22number-21number-quantity-0" source="22" target="21" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-23number-21number-quantity-1" source="23" target="21" sourceHandle="number" targetHandle="number-quantity-1"/>
+        <edge id="reactflow__edge-26number-15number-value" source="26" target="15" sourceHandle="number" targetHandle="number-value"/>
+        <edge id="reactflow__edge-5then-8input-stream" source="5" target="8" sourceHandle="then" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-21output-stream-2-39to-burn" source="21" target="39" sourceHandle="output-stream-2" targetHandle="to-burn"/>
+        <edge id="reactflow__edge-21output-stream-3-40input-stream" source="21" target="40" sourceHandle="output-stream-3" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-41number-40number-Efficiency-0" source="41" target="40" sourceHandle="number" targetHandle="number-Efficiency-0"/>
+        <edge id="reactflow__edge-42number-40number-Comfort-1" source="42" target="40" sourceHandle="number" targetHandle="number-Comfort-1"/>
+        <edge id="reactflow__edge-43number-40number-Durability-2" source="43" target="40" sourceHandle="number" targetHandle="number-Durability-2"/>
+        <edge id="reactflow__edge-44number-40number-HP-3" source="44" target="40" sourceHandle="number" targetHandle="number-HP-3"/>
+        <edge id="reactflow__edge-45number-40number-Level-4" source="45" target="40" sourceHandle="number" targetHandle="number-Level-4"/>
+        <edge id="reactflow__edge-46number-40number-type-5" source="46" target="40" sourceHandle="number" targetHandle="number-type-5"/>
+        <edge id="reactflow__edge-40output-47to-burn" source="40" target="47" sourceHandle="output" targetHandle="to-burn"/>
+        <edge id="reactflow__edge-40minted-output-48input-stream" source="40" target="48" sourceHandle="minted-output" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-49address-48address-recipient" source="49" target="48" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-51number-50number-quantity-0" source="51" target="50" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-50output-stream-0-52input-stream" source="50" target="52" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-53number-52number-value" source="53" target="52" sourceHandle="number" targetHandle="number-value"/>
+        <edge id="reactflow__edge-52output-stream-54to-burn" source="52" target="54" sourceHandle="output-stream" targetHandle="to-burn"/>
+        <edge id="reactflow__edge-62number-61number-quantity-0" source="62" target="61" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-61output-stream-0-63input-stream" source="61" target="63" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-64boolean-63boolean-condition" source="64" target="63" sourceHandle="boolean" targetHandle="boolean-condition"/>
+        <edge id="reactflow__edge-63else-65input-stream" source="63" target="65" sourceHandle="else" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-63then-66input-stream" source="63" target="66" sourceHandle="then" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-67number-66number-quantity" source="67" target="66" sourceHandle="number" targetHandle="number-quantity"/>
+        <edge id="reactflow__edge-66output-68input1" source="66" target="68" sourceHandle="output" targetHandle="input1"/>
+        <edge id="reactflow__edge-66minted-output-68input2" source="66" target="68" sourceHandle="minted-output" targetHandle="input2"/>
+        <edge id="reactflow__edge-72number-71number-value" source="72" target="71" sourceHandle="number" targetHandle="number-value"/>
+        <edge id="reactflow__edge-71output-stream-73input-stream" source="71" target="73" sourceHandle="output-stream" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-74address-73address-recipient" source="74" target="73" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-68output-71input-stream" source="68" target="71" sourceHandle="output" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-10output-15input-stream" source="10" target="15" sourceHandle="output" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-75number-15number-token-id" source="75" target="15" sourceHandle="number" targetHandle="number-token-id"/>
+        <edge id="reactflow__edge-76number-71number-token-id" source="76" target="71" sourceHandle="number" targetHandle="number-token-id"/>
+        <edge id="reactflow__edge-77number-19number-token-id" source="77" target="19" sourceHandle="number" targetHandle="number-token-id"/>
+        <edge id="reactflow__edge-19output-stream-58to-burn" source="19" target="58" sourceHandle="output-stream" targetHandle="to-burn"/>
+        <edge id="reactflow__edge-21output-stream-0-30to-burn" source="21" target="30" sourceHandle="output-stream-0" targetHandle="to-burn"/>
+        <edge id="reactflow__edge-21output-stream-1-36to-burn" source="21" target="36" sourceHandle="output-stream-1" targetHandle="to-burn"/>
+        <edge id="reactflow__edge-78number-21number-id-2" source="78" target="21" sourceHandle="number" targetHandle="number-id-2"/>
+        <edge id="reactflow__edge-79number-21number-id-3" source="79" target="21" sourceHandle="number" targetHandle="number-id-3"/>
+    </edges>
+    <variables>
+        <variable id="global-sender" name="Sender" type="Address" scope="state"/>
+        <variable id="global-blocknumber" name="BlockNumber" type="Number" scope="state"/>
+        <variable id="ab5de541-d354-4e54-aa20-12329f0c765f" name="SMAC" type="Boolean" scope="input"/>
+        <variable id="1a346ca8-4753-4347-a85f-86410eeee5f0" name="userWallet" type="Address" scope="input"/>
+        <variable id="fb65011d-e1b5-435c-aabe-08c709b01209" name="energia" type="Number" scope="input"/>
+        <variable id="debb214c-b7c6-45e7-8668-9427e6b37aa6" name="tipoSneaker" type="Number" scope="input"/>
+        <variable id="a691297f-bfe2-4603-97ab-ab99ef3fcc21" name="eff" type="Number" scope="input"/>
+        <variable id="a5304974-8496-45d9-9c60-9dfa724cdd1b" name="dur" type="Number" scope="input"/>
+        <variable id="be49d814-105d-46da-9e73-cba5692bc21c" name="price" type="Number" scope="input"/>
+        <variable id="d611f1f6-ef12-4298-9c33-34389385e998" name="costoGST" type="Number" scope="input"/>
+        <variable id="8d2f392a-cf3e-4b6e-bcd5-d0a074b08f97" name="costoGMT" type="Number" scope="input"/>
+        <variable id="1276c42b-fd55-4227-bebf-4de3876a8f29" name="id" type="Number" scope="input"/>
+        <variable id="a692178f-1223-421b-9915-3d2527961733" name="neweff" type="Number" scope="input"/>
+        <variable id="57c850de-a14c-4603-be38-bff77ce6633c" name="newcom" type="Number" scope="input"/>
+        <variable id="054c0821-5a6b-476f-8c6c-c0b34225ae08" name="newdur" type="Number" scope="input"/>
+        <variable id="fa6a518a-f9b0-4f6b-b25c-7fd91ca25244" name="newHP" type="Number" scope="input"/>
+        <variable id="5e23788a-e48a-4317-a2b9-cda9ff4b6e60" name="newlev" type="Number" scope="input"/>
+        <variable id="bad8f457-f3e9-44d3-a4ca-e44ad525679d" name="newtype" type="Number" scope="input"/>
+        <variable id="8bcd2b60-3e4e-44ff-bc69-b2d690291e19" name="comfortSneaker" type="Number" scope="input"/>
+        <variable id="29b7a54f-457c-4075-9bd5-4a007d60e361" name="lev" type="Number" scope="input"/>
+        <variable id="34fcfa8f-efc3-4572-87df-d9f44d59a893" name="repairPrice" type="Number" scope="local_variable" value="0"/>
+        <variable id="state-var-ts-0" name="GST_TotalSupply" type="Number" scope="state"/>
+        <variable id="state-var-bof-0" name="GST_balanceOf" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Address&quot;}"/>
+        <variable id="state-var-ts-1" name="GMT_TotalSupply" type="Number" scope="state"/>
+        <variable id="state-var-bof-1" name="GMT_balanceOf" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Address&quot;}"/>
+        <variable id="state-var-attr-2-0" name="Sneaker_Efficiency" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Number&quot;}"/>
+        <variable id="state-var-attr-2-1" name="Sneaker_Comfort" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Number&quot;}"/>
+        <variable id="state-var-attr-2-2" name="Sneaker_Durability" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Number&quot;}"/>
+        <variable id="state-var-attr-2-3" name="Sneaker_HP" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Number&quot;}"/>
+        <variable id="state-var-attr-2-4" name="Sneaker_Level" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Number&quot;}"/>
+        <variable id="state-var-attr-2-5" name="Sneaker_type" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Number&quot;}"/>
+    </variables>
+</model>

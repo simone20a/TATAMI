@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model>
+    <nodes>
+        <node id="0" type="fungibleTokenNode" x="58.04709823008747" y="120.60380173422348">
+            <data><![CDATA[{"label":"Fungible Token","name":"SolarCoin","symbol":"SLR"}]]></data>
+        </node>
+        <node id="1" type="entryNode" x="147.67253555124503" y="600.5654649312261">
+            <data><![CDATA[{"label":"Entry","name":"energyToValueBridge","tokenSelections":[{"id":0,"selectedToken":"SolarCoin"}],"tokens":[{"name":"SolarCoin","type":"Fungible"},{"name":"CouponSolar","type":"Non-Fungible"}]}]]></data>
+        </node>
+        <node id="2" type="numberNode" x="201.50480525542045" y="863.2462490885648">
+            <data><![CDATA[{"label":"number","value":"qtaMWh"}]]></data>
+        </node>
+        <node id="3" type="mintNode" x="541.4005329779253" y="697.4533023842014">
+            <data><![CDATA[{"label":"Mint","allTokens":[{"name":"SolarCoin","type":"Fungible"},{"name":"CouponSolar","type":"Non-Fungible"}],"nftData":[{"label":"Non-Fungible Token","name":"CouponSolar","attributes":[{"id":0,"name":"value","type":"Number"}]}],"selectedToken":"SolarCoin"}]]></data>
+        </node>
+        <node id="4" type="joinNode" x="867.7465574313751" y="776.8388928499274">
+            <data><![CDATA[{"label":"Join"}]]></data>
+        </node>
+        <node id="5" type="transferNode" x="1247.24281432401" y="794.6487074833522">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="6" type="addressNode" x="896.9741022790856" y="947.0260096298662">
+            <data><![CDATA[{"label":"address","value":"userWallet"}]]></data>
+        </node>
+        <node id="7" type="numberNode" x="-192.13804011203865" y="735.5895145887075">
+            <data><![CDATA[{"label":"number","value":"0"}]]></data>
+        </node>
+        <node id="8" type="entryNode" x="117.95386459854402" y="1249.0584267079707">
+            <data><![CDATA[{"label":"Entry","name":"solarCoinNFTCouponGeneration","tokenSelections":[{"id":0,"selectedToken":"SolarCoin"}],"tokens":[{"name":"SolarCoin","type":"Fungible"},{"name":"CouponSolar","type":"Non-Fungible"}]}]]></data>
+        </node>
+        <node id="9" type="numberNode" x="-205.54498330223495" y="1388.4621172711863">
+            <data><![CDATA[{"label":"number","value":"100"}]]></data>
+        </node>
+        <node id="11" type="nonFungibleTokenNode" x="373.28265304473007" y="120.42235072487607">
+            <data><![CDATA[{"label":"Non-Fungible Token","name":"CouponSolar","attributes":[{"id":0,"name":"value","type":"Number"}]}]]></data>
+        </node>
+        <node id="21" type="depositNode" x="917.3890890146795" y="1295.3779207213488">
+            <data><![CDATA[{"label":"Deposit","pools":[{"label":"Pool","name":"Company","keys":[],"allTokens":[{"name":"SolarCoin","type":"Fungible"},{"name":"CouponSolar","type":"Non-Fungible"}],"selectedToken":"SolarCoin","tokenType":"Fungible"}],"selectedPool":"Company"}]]></data>
+        </node>
+        <node id="22" type="poolNode" x="695.3955834480927" y="121.09392378027106">
+            <data><![CDATA[{"label":"Pool","name":"Company","keys":[],"allTokens":[{"name":"SolarCoin","type":"Fungible"},{"name":"CouponSolar","type":"Non-Fungible"}],"selectedToken":"SolarCoin"}]]></data>
+        </node>
+        <node id="25" type="entryNode" x="112.67831498195596" y="1829.2328490554894">
+            <data><![CDATA[{"label":"Entry","name":"sellerDrivenVariableSetting","tokenSelections":[{"id":0,"selectedToken":"SolarCoin"}],"tokens":[{"name":"SolarCoin","type":"Fungible"},{"name":"CouponSolar","type":"Non-Fungible"}]}]]></data>
+        </node>
+        <node id="26" type="numberNode" x="-189.94066563602883" y="1969.5065394919297">
+            <data><![CDATA[{"label":"number","value":"0"}]]></data>
+        </node>
+        <node id="27" type="setNode" x="472.8279078552504" y="1854.8475981739828">
+            <data><![CDATA[{"label":"Set","variables":[{"id":"560f1fd2-d215-490d-8607-2456bf3c3696","name":"productPrice","type":"Number","scope":"local_variable","value":"0","isDeletable":true},{"id":"state-var-attr-11-0","name":"CouponSolar_value","type":"Number","scope":"state","isDeletable":false,"metadata":{"inputType":"Number"}}],"selectedVariable":"productPrice"}]]></data>
+        </node>
+        <node id="28" type="numberNode" x="171.208724306028" y="2101.3635602291547">
+            <data><![CDATA[{"label":"number","value":"price"}]]></data>
+        </node>
+        <node id="31" type="entryNode" x="113.11253404633447" y="2366.534797926365">
+            <data><![CDATA[{"label":"Entry","name":"solarcoinTransactionFT","tokenSelections":[{"id":0,"selectedToken":"SolarCoin"}],"tokens":[{"name":"SolarCoin","type":"Fungible"},{"name":"CouponSolar","type":"Non-Fungible"}]}]]></data>
+        </node>
+        <node id="33" type="numberNode" x="-232.08053492511695" y="2504.933301401498">
+            <data><![CDATA[{"label":"number","value":"productPrice"}]]></data>
+        </node>
+        <node id="42" type="transferNode" x="500.26483283271045" y="2468.2138483629597">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="43" type="addressNode" x="135.86156499141885" y="2624.5539308269995">
+            <data><![CDATA[{"label":"address","value":"sellerWallet"}]]></data>
+        </node>
+        <node id="44" type="entryNode" x="113.46964115846154" y="2955.131201078858">
+            <data><![CDATA[{"label":"Entry","name":"solarcoinTransactionNFT","tokenSelections":[{"id":0,"selectedToken":"CouponSolar"}],"tokens":[{"name":"SolarCoin","type":"Fungible"},{"name":"CouponSolar","type":"Non-Fungible"}]}]]></data>
+        </node>
+        <node id="45" type="numberNode" x="-203.66765698244265" y="3092.2448443812377">
+            <data><![CDATA[{"label":"number","value":"idadd"}]]></data>
+        </node>
+        <node id="57" type="transferNode" x="513.5662713475507" y="3047.669693306454">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="58" type="addressNode" x="166.13763987000715" y="3213.9298568479303">
+            <data><![CDATA[{"label":"address","value":"sellerWallet"}]]></data>
+        </node>
+        <node id="71" type="mintNode" x="521.9994122496945" y="1344.8561852145926">
+            <data><![CDATA[{"label":"Mint","allTokens":[{"name":"SolarCoin","type":"Fungible"},{"name":"CouponSolar","type":"Non-Fungible"}],"nftData":[{"label":"Non-Fungible Token","name":"CouponSolar","attributes":[{"id":0,"name":"value","type":"Number"}]}],"selectedToken":"CouponSolar"}]]></data>
+        </node>
+        <node id="83" type="transferNode" x="914.3766098459439" y="1462.3583035954337">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="84" type="addressNode" x="564.188011047819" y="1598.3769502902765">
+            <data><![CDATA[{"label":"address","value":"Sender"}]]></data>
+        </node>
+        <node id="85" type="burnNode" x="811.3265300180799" y="1948.7562797362198">
+            <data><![CDATA[{"label":"Burn"}]]></data>
+        </node>
+        <node id="86" type="numberNode" x="177.3943404979883" y="1505.3158252266978">
+            <data><![CDATA[{"label":"number","value":"value1"}]]></data>
+        </node>
+    </nodes>
+    <edges>
+        <edge id="reactflow__edge-1output-stream-0-3input-stream" source="1" target="3" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-2number-3number-quantity" source="2" target="3" sourceHandle="number" targetHandle="number-quantity"/>
+        <edge id="reactflow__edge-3output-4input1" source="3" target="4" sourceHandle="output" targetHandle="input1"/>
+        <edge id="reactflow__edge-3minted-output-4input2" source="3" target="4" sourceHandle="minted-output" targetHandle="input2"/>
+        <edge id="reactflow__edge-4output-5input-stream" source="4" target="5" sourceHandle="output" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-6address-5address-recipient" source="6" target="5" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-7number-1number-quantity-0" source="7" target="1" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-9number-8number-quantity-0" source="9" target="8" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-26number-25number-quantity-0" source="26" target="25" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-25output-stream-0-27input-stream" source="25" target="27" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-28number-27number-value" source="28" target="27" sourceHandle="number" targetHandle="number-value"/>
+        <edge id="reactflow__edge-33number-31number-quantity-0" source="33" target="31" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-43address-42address-recipient" source="43" target="42" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-45number-44number-quantity-0" source="45" target="44" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-26number-25number-quantity-1" source="26" target="25" sourceHandle="number" targetHandle="number-quantity-1"/>
+        <edge id="reactflow__edge-58address-57address-recipient" source="58" target="57" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-71output-21input-stream" source="71" target="21" sourceHandle="output" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-84address-83address-recipient" source="84" target="83" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-71minted-output-83input-stream" source="71" target="83" sourceHandle="minted-output" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-27output-stream-85to-burn" source="27" target="85" sourceHandle="output-stream" targetHandle="to-burn"/>
+        <edge id="reactflow__edge-44output-stream-0-57input-stream" source="44" target="57" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-8output-stream-0-71input-stream" source="8" target="71" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-86number-71number-value-0" source="86" target="71" sourceHandle="number" targetHandle="number-value-0"/>
+        <edge id="reactflow__edge-31output-stream-0-42input-stream" source="31" target="42" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+    </edges>
+    <variables>
+        <variable id="global-sender" name="Sender" type="Address" scope="state"/>
+        <variable id="global-blocknumber" name="BlockNumber" type="Number" scope="state"/>
+        <variable id="624dccbc-3ec3-4657-8c99-bf78713f2cc6" name="qtaMWh" type="Number" scope="input"/>
+        <variable id="30f70649-4237-48dc-aec7-142c4887a82a" name="userWallet" type="Address" scope="input"/>
+        <variable id="cdb20367-400f-4893-b555-b0a462c1ad48" name="price" type="Number" scope="input"/>
+        <variable id="f12cd1c2-8265-4e6e-97d1-a7d036eb5dab" name="sellerWallet" type="Address" scope="input"/>
+        <variable id="83ff0cbf-ce5f-4b5b-a3e1-55028599ce5b" name="priceNFT" type="Number" scope="input"/>
+        <variable id="46f9973a-662d-4f7a-af6c-95063b2a06c7" name="value1" type="Number" scope="constant" value="1"/>
+        <variable id="6950f462-f729-49f5-8dba-85662467b296" name="idadd" type="Number" scope="input"/>
+        <variable id="560f1fd2-d215-490d-8607-2456bf3c3696" name="productPrice" type="Number" scope="local_variable" value="0"/>
+        <variable id="state-var-ts-0" name="SolarCoin_TotalSupply" type="Number" scope="state"/>
+        <variable id="state-var-bof-0" name="SolarCoin_balanceOf" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Address&quot;}"/>
+        <variable id="state-var-attr-11-0" name="CouponSolar_value" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Number&quot;}"/>
+        <variable id="state-var-amount-22" name="Company_amount" type="Number" scope="state"/>
+    </variables>
+</model>

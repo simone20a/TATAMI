@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model>
+    <nodes>
+        <node id="0" type="nonFungibleTokenNode" x="188.0538648514878" y="9.81793372344697">
+            <data><![CDATA[{"label":"Non-Fungible Token","name":"ToucanCarbon","attributes":[{"id":0,"name":"vintage","type":"Number"},{"id":1,"name":"id","type":"Number"},{"id":2,"name":"standard","type":"String"},{"id":3,"name":"amount","type":"Number"}]}]]></data>
+        </node>
+        <node id="1" type="fungibleTokenNode" x="486.4210609968193" y="12.667051301027357">
+            <data><![CDATA[{"label":"Fungible Token","name":"ToucanCO2","symbol":"TCO2"}]]></data>
+        </node>
+        <node id="2" type="entryNode" x="181.93989670687643" y="604.2079205307234">
+            <data><![CDATA[{"label":"Entry","name":"carbonBridge","tokenSelections":[{"id":0,"selectedToken":"ToucanCarbon"}],"tokens":[{"name":"ToucanCO2","type":"Fungible"},{"name":"ToucanCarbon","type":"Non-Fungible"}]}]]></data>
+        </node>
+        <node id="3" type="numberNode" x="-158.17896828255576" y="747.2230235354677">
+            <data><![CDATA[{"label":"number","value":"0"}]]></data>
+        </node>
+        <node id="4" type="mintNode" x="653.7793576412423" y="700.4202594682134">
+            <data><![CDATA[{"label":"Mint","allTokens":[{"name":"ToucanCO2","type":"Fungible"},{"name":"ToucanCarbon","type":"Non-Fungible"}],"nftData":[{"label":"Non-Fungible Token","name":"ToucanCarbon","attributes":[{"id":0,"name":"vintage","type":"Number"},{"id":1,"name":"id","type":"Number"},{"id":2,"name":"standard","type":"String"},{"id":3,"name":"amount","type":"Number"}]}],"selectedToken":"ToucanCarbon"}]]></data>
+        </node>
+        <node id="5" type="numberNode" x="242.37494391327738" y="873.9728601651774">
+            <data><![CDATA[{"label":"number","value":"anno"}]]></data>
+        </node>
+        <node id="6" type="numberNode" x="241.12478054298714" y="996.7383803427657">
+            <data><![CDATA[{"label":"number","value":"idCertificato "}]]></data>
+        </node>
+        <node id="7" type="stringNode" x="240.62445380240626" y="1115.2543906312253">
+            <data><![CDATA[{"label":"string","value":"certificato"}]]></data>
+        </node>
+        <node id="8" type="numberNode" x="241.6238003212448" y="1238.0199108088136">
+            <data><![CDATA[{"label":"number","value":"qta"}]]></data>
+        </node>
+        <node id="9" type="burnNode" x="1009.1853185795464" y="703.4170638618393">
+            <data><![CDATA[{"label":"Burn"}]]></data>
+        </node>
+        <node id="12" type="entryNode" x="163.6845422689032" y="1643.443664979116">
+            <data><![CDATA[{"label":"Entry","name":"carbonCreditSplitting","tokenSelections":[{"id":0,"selectedToken":"ToucanCO2"},{"id":1,"selectedToken":"ToucanCarbon"}],"tokens":[{"name":"ToucanCO2","type":"Fungible"},{"name":"ToucanCarbon","type":"Non-Fungible"}]}]]></data>
+        </node>
+        <node id="13" type="numberNode" x="-223.0200436231898" y="1773.0729031447613">
+            <data><![CDATA[{"label":"number","value":"ToucanCarbon_amount"}]]></data>
+        </node>
+        <node id="16" type="transferNode" x="983.0091192477049" y="1655.01810792369">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="17" type="addressNode" x="634.3916833042472" y="1703.8821927880172">
+            <data><![CDATA[{"label":"address","value":"userWallet"}]]></data>
+        </node>
+        <node id="21" type="booleanNode" x="689.0020682660889" y="1072.0699707495885">
+            <data><![CDATA[{"label":"boolean","value":"ToucanCarbon_standard(certificato)==criterio"}]]></data>
+        </node>
+        <node id="24" type="poolNode" x="791.2087463426648" y="12.345833605614573">
+            <data><![CDATA[{"label":"Pool","name":"CarbonPool","keys":[],"allTokens":[{"name":"ToucanCO2","type":"Fungible"},{"name":"ToucanCarbon","type":"Non-Fungible"}],"selectedToken":"ToucanCarbon"}]]></data>
+        </node>
+        <node id="26" type="burnNode" x="1303.2249001088853" y="2043.8653596174718">
+            <data><![CDATA[{"label":"Burn"}]]></data>
+        </node>
+        <node id="27" type="joinNode" x="972.2523187270025" y="2022.8613984916224">
+            <data><![CDATA[{"label":"Join"}]]></data>
+        </node>
+        <node id="28" type="entryNode" x="161.1162441715593" y="2500.2478832854104">
+            <data><![CDATA[{"label":"Entry","name":"carbonRetirement","tokenSelections":[{"id":0,"selectedToken":"ToucanCO2"}],"tokens":[{"name":"ToucanCO2","type":"Fungible"},{"name":"ToucanCarbon","type":"Non-Fungible"}]}]]></data>
+        </node>
+        <node id="29" type="numberNode" x="-159.80450571775185" y="2641.9628067628732">
+            <data><![CDATA[{"label":"number","value":"qtaburn"}]]></data>
+        </node>
+        <node id="31" type="withdrawNode" x="613.3918521497883" y="1947.2781905943598">
+            <data><![CDATA[{"label":"Withdraw","pools":[{"label":"Pool","name":"CarbonPool","keys":[],"allTokens":[{"name":"ToucanCO2","type":"Fungible"},{"name":"ToucanCarbon","type":"Non-Fungible"}],"selectedToken":"ToucanCarbon","tokenType":"Non-Fungible"}],"selectedPool":"CarbonPool"}]]></data>
+        </node>
+        <node id="32" type="numberNode" x="222.11220830621124" y="2052.5026668790497">
+            <data><![CDATA[{"label":"number","value":"ToucanCarbon_id(idCertificato)"}]]></data>
+        </node>
+        <node id="41" type="burnNode" x="636.663932427036" y="2598.322518523025">
+            <data><![CDATA[{"label":"Burn"}]]></data>
+        </node>
+        <node id="44" type="depositNode" x="2370.956163086777" y="1055.9911459560158">
+            <data><![CDATA[{"label":"Deposit","pools":[{"label":"Pool","name":"CarbonPool","keys":[],"allTokens":[{"name":"ToucanCO2","type":"Fungible"},{"name":"ToucanCarbon","type":"Non-Fungible"}],"selectedToken":"ToucanCarbon","tokenType":"Non-Fungible"}],"selectedPool":"CarbonPool"}]]></data>
+        </node>
+        <node id="45" type="ifNode" x="1019.7500759040427" y="937.9918812944954">
+            <data><![CDATA[{"label":"If"}]]></data>
+        </node>
+        <node id="46" type="transferNode" x="1670.8919201187498" y="1043.1805902286494">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="47" type="addressNode" x="1351.1696073695957" y="1123.6718801091547">
+            <data><![CDATA[{"label":"address","value":"Sender"}]]></data>
+        </node>
+        <node id="48" type="ifNode" x="1667.4034253756215" y="801.8334838407518">
+            <data><![CDATA[{"label":"If"}]]></data>
+        </node>
+        <node id="49" type="booleanNode" x="1344.0057432833426" y="808.3775506536967">
+            <data><![CDATA[{"label":"boolean","value":"wallet==true"}]]></data>
+        </node>
+        <node id="50" type="transferNode" x="2374.234839237381" y="810.6008038403929">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="51" type="addressNode" x="2054.6037054850144" y="851.6083698584391">
+            <data><![CDATA[{"label":"address","value":"Sender"}]]></data>
+        </node>
+        <node id="52" type="numberNode" x="-222.02100883295424" y="1902.2853184785672">
+            <data><![CDATA[{"label":"number","value":"id"}]]></data>
+        </node>
+    </nodes>
+    <edges>
+        <edge id="reactflow__edge-3number-2number-quantity-0" source="3" target="2" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-2output-stream-0-4input-stream" source="2" target="4" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-5number-4number-vintage-0" source="5" target="4" sourceHandle="number" targetHandle="number-vintage-0"/>
+        <edge id="reactflow__edge-6number-4number-id-1" source="6" target="4" sourceHandle="number" targetHandle="number-id-1"/>
+        <edge id="reactflow__edge-7string-4string-standard-2" source="7" target="4" sourceHandle="string" targetHandle="string-standard-2"/>
+        <edge id="reactflow__edge-8number-4number-amount-3" source="8" target="4" sourceHandle="number" targetHandle="number-amount-3"/>
+        <edge id="reactflow__edge-4output-9to-burn" source="4" target="9" sourceHandle="output" targetHandle="to-burn"/>
+        <edge id="reactflow__edge-13number-12number-quantity-0" source="13" target="12" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-17address-16address-recipient" source="17" target="16" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-12output-stream-0-16input-stream" source="12" target="16" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-27output-26to-burn" source="27" target="26" sourceHandle="output" targetHandle="to-burn"/>
+        <edge id="reactflow__edge-29number-28number-quantity-0" source="29" target="28" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-31output-stream-27input1" source="31" target="27" sourceHandle="output-stream" targetHandle="input1"/>
+        <edge id="reactflow__edge-31withdrawn-stream-27input2" source="31" target="27" sourceHandle="withdrawn-stream" targetHandle="input2"/>
+        <edge id="reactflow__edge-12output-stream-1-31input-stream" source="12" target="31" sourceHandle="output-stream-1" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-32number-31number-id" source="32" target="31" sourceHandle="number" targetHandle="number-id"/>
+        <edge id="reactflow__edge-4minted-output-45input-stream" source="4" target="45" sourceHandle="minted-output" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-21boolean-45boolean-condition" source="21" target="45" sourceHandle="boolean" targetHandle="boolean-condition"/>
+        <edge id="reactflow__edge-45else-46input-stream" source="45" target="46" sourceHandle="else" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-47address-46address-recipient" source="47" target="46" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-45then-48input-stream" source="45" target="48" sourceHandle="then" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-49boolean-48boolean-condition" source="49" target="48" sourceHandle="boolean" targetHandle="boolean-condition"/>
+        <edge id="reactflow__edge-48else-44input-stream" source="48" target="44" sourceHandle="else" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-48then-50input-stream" source="48" target="50" sourceHandle="then" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-51address-50address-recipient" source="51" target="50" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-28output-stream-0-41to-burn" source="28" target="41" sourceHandle="output-stream-0" targetHandle="to-burn"/>
+        <edge id="reactflow__edge-52number-12number-id-1" source="52" target="12" sourceHandle="number" targetHandle="number-id-1"/>
+    </edges>
+    <variables>
+        <variable id="global-sender" name="Sender" type="Address" scope="state"/>
+        <variable id="global-blocknumber" name="BlockNumber" type="Number" scope="state"/>
+        <variable id="91695c54-f09a-4b85-ac6f-f439b3ab5754" name="anno" type="Number" scope="input"/>
+        <variable id="a0381ed5-abbc-4ae9-a252-979865125ab6" name="idCertificato" type="Number" scope="input"/>
+        <variable id="49e2b92e-cdf2-4bac-b8d6-25e5547227ff" name="certificato" type="String" scope="input"/>
+        <variable id="f31f599e-7844-4916-81f4-682ed04750fe" name="qta" type="Number" scope="input"/>
+        <variable id="fe2c68e1-df9a-4a43-9590-ebb0e6ce3d44" name="userWallet" type="Address" scope="input"/>
+        <variable id="b18d9414-6cc4-4480-8da4-2b18b201d94c" name="criterio" type="String" scope="constant" value="Puro.earth"/>
+        <variable id="c6565f16-9a17-41e2-b9ac-370cc7ce27ed" name="qtaburn" type="Number" scope="input"/>
+        <variable id="5d58c56f-c51a-4771-8020-03188e04a5a3" name="wallet" type="Boolean" scope="input"/>
+        <variable id="eb074b34-87ab-4670-82a8-05a0dae81d5b" name="id" type="Number" scope="input"/>
+        <variable id="state-var-ts-1" name="ToucanCO2_TotalSupply" type="Number" scope="state"/>
+        <variable id="state-var-bof-1" name="ToucanCO2_balanceOf" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Address&quot;}"/>
+        <variable id="state-var-attr-0-0" name="ToucanCarbon_vintage" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Number&quot;}"/>
+        <variable id="state-var-attr-0-1" name="ToucanCarbon_id" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Number&quot;}"/>
+        <variable id="state-var-attr-0-2" name="ToucanCarbon_standard" type="String" scope="state" metadata="{&quot;inputType&quot;:&quot;Number&quot;}"/>
+        <variable id="state-var-attr-0-3" name="ToucanCarbon_amount" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Number&quot;}"/>
+        <variable id="state-var-amount-24" name="CarbonPool_amount" type="Number" scope="state"/>
+    </variables>
+</model>

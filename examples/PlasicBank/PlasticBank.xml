@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model>
+    <nodes>
+        <node id="0" type="fungibleTokenNode" x="-209.82403627594027" y="-219.0494789696752">
+            <data><![CDATA[{"label":"Fungible Token","name":"socialPlasticToken","symbol":"SPT"}]]></data>
+        </node>
+        <node id="6" type="entryNode" x="-231.226271751581" y="96.50717043153747">
+            <data><![CDATA[{"label":"Entry","name":"socialPlasticCollection","tokenSelections":[{"id":0,"selectedToken":"socialPlasticToken"}],"tokens":[{"name":"socialPlasticToken","type":"Fungible"}]}]]></data>
+        </node>
+        <node id="7" type="numberNode" x="-624.8852305994468" y="229.4594026328785">
+            <data><![CDATA[{"label":"number","value":"plasticWeight"}]]></data>
+        </node>
+        <node id="9" type="addressNode" x="-170.81794488512867" y="368.1790664276148">
+            <data><![CDATA[{"label":"address","value":"collectors"}]]></data>
+        </node>
+        <node id="11" type="transferNode" x="252.3052088285752" y="204.43819986407885">
+            <data><![CDATA[{"label":"Transfer"}]]></data>
+        </node>
+        <node id="14" type="entryNode" x="-232.40445038600822" y="1181.0558668585095">
+            <data><![CDATA[{"label":"Entry","name":"socialValueRedemption","tokenSelections":[{"id":0,"selectedToken":"socialPlasticToken"}],"tokens":[{"name":"socialPlasticToken","type":"Fungible"}]}]]></data>
+        </node>
+        <node id="15" type="numberNode" x="-597.1345531104681" y="1309.3571167648383">
+            <data><![CDATA[{"label":"number","value":"valueTax"}]]></data>
+        </node>
+        <node id="28" type="entryNode" x="-238.06627063216786" y="649.5669235926887">
+            <data><![CDATA[{"label":"Entry","name":"servicePartnerTaxSetting","tokenSelections":[{"id":0,"selectedToken":"socialPlasticToken"}],"tokens":[{"name":"socialPlasticToken","type":"Fungible"}]}]]></data>
+        </node>
+        <node id="29" type="numberNode" x="-613.1507229396098" y="788.9173028380244">
+            <data><![CDATA[{"label":"number","value":"0"}]]></data>
+        </node>
+        <node id="30" type="setNode" x="171.02407224870797" y="669.027562777756">
+            <data><![CDATA[{"label":"Set","variables":[{"id":"4a2aebc6-0ce6-48b0-807f-9b1e032816a3","name":"valueTax","type":"Number","scope":"global_variable","value":"0","isDeletable":true}],"selectedVariable":"valueTax"}]]></data>
+        </node>
+        <node id="31" type="numberNode" x="-216.67015447057145" y="930.4891451280901">
+            <data><![CDATA[{"label":"number","value":"tax"}]]></data>
+        </node>
+        <node id="33" type="burnNode" x="569.2097234955147" y="756.014028549908">
+            <data><![CDATA[{"label":"Burn"}]]></data>
+        </node>
+        <node id="34" type="burnNode" x="204.73062697278033" y="1283.212783111926">
+            <data><![CDATA[{"label":"Burn"}]]></data>
+        </node>
+    </nodes>
+    <edges>
+        <edge id="reactflow__edge-7number-6number-quantity-0" source="7" target="6" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-9address-11address-recipient" source="9" target="11" sourceHandle="address" targetHandle="address-recipient"/>
+        <edge id="reactflow__edge-15number-14number-quantity-0" source="15" target="14" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-6output-stream-0-11input-stream" source="6" target="11" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-29number-28number-quantity-0" source="29" target="28" sourceHandle="number" targetHandle="number-quantity-0"/>
+        <edge id="reactflow__edge-28output-stream-0-30input-stream" source="28" target="30" sourceHandle="output-stream-0" targetHandle="input-stream"/>
+        <edge id="reactflow__edge-31number-30number-value" source="31" target="30" sourceHandle="number" targetHandle="number-value"/>
+        <edge id="reactflow__edge-30output-stream-33to-burn" source="30" target="33" sourceHandle="output-stream" targetHandle="to-burn"/>
+        <edge id="reactflow__edge-14output-stream-0-34to-burn" source="14" target="34" sourceHandle="output-stream-0" targetHandle="to-burn"/>
+    </edges>
+    <variables>
+        <variable id="global-sender" name="Sender" type="Address" scope="state"/>
+        <variable id="global-blocknumber" name="BlockNumber" type="Number" scope="state"/>
+        <variable id="df12580d-ee13-430d-8ae7-9259bf53d978" name="plasticWeight" type="Number" scope="input"/>
+        <variable id="d09f0e10-086a-4528-b92c-047b9894cfb6" name="collectors" type="Address" scope="input"/>
+        <variable id="e84a32be-eaea-42d9-959e-b9662e4fbf9e" name="tax" type="Number" scope="input"/>
+        <variable id="4a2aebc6-0ce6-48b0-807f-9b1e032816a3" name="valueTax" type="Number" scope="global_variable" value="0"/>
+        <variable id="state-var-ts-0" name="socialPlasticToken_TotalSupply" type="Number" scope="state"/>
+        <variable id="state-var-bof-0" name="socialPlasticToken_balanceOf" type="Number" scope="state" metadata="{&quot;inputType&quot;:&quot;Address&quot;}"/>
+    </variables>
+</model>
