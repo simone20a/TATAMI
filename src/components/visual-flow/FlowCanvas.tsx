@@ -35,6 +35,7 @@ import {
 } from "@/components/ui/tooltip"
 import VariablesSheet, { Variable, globalStateVariables } from './VariablesSheet';
 import ErrorValidationSheet, { ValidationError } from './ErrorValidationSheet';
+import { runExtraValidation } from './validationExtras';
 
 type MenuState = {
   id: string;
@@ -747,6 +748,14 @@ const Flow = ({ projectName, initialNodes = [], initialEdges = [], initialVariab
         });
       }
     });
+
+    // Additional checks, not part of the original runValidation: Join from
+    // different Entries (already enforced only at edge-draw time by
+    // isValidConnection), dangling edges/references, duplicate names,
+    // generalized handle type-mismatch, and the two token-type checks
+    // (Join combining different tokens, Join/Split on a Non-Fungible token).
+    // See validationExtras.ts for details.
+    errors.push(...runExtraValidation(currentNodes, currentEdges, currentVars));
 
     setValidationErrors(errors);
   }, [getNodes, getEdges, variables, allTokens]);
