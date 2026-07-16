@@ -5,7 +5,8 @@
  * `tatami-validator-cli` project (kept outside this repo), where they were
  * implemented and tested first against TATAMI/examples/*.xml and a set of
  * stress-test models. See that project's README for the rationale behind
- * each check.
+ * each check. Kept in sync with tatami-validator-cli/src/validator.ts and
+ * tokenFlow.ts — any check added/changed there should be mirrored here.
  *
  * Checks added here:
  *  - Join combining token flows from two different Entry nodes (already
@@ -21,6 +22,10 @@
  *  - Generalized handle type-mismatch, re-checked on every edge already
  *    present in the graph (isValidConnection only checks this once, at the
  *    moment the edge is drawn).
+ *  - Single edge per output: at most one edge can leave a given source
+ *    handle, without exceptions (literal "type block" nodes included).
+ *  - Single edge per input: at most one edge can reach a given target
+ *    handle, without exceptions (symmetric to the previous check).
  *  - Join combining two flows that carry different tokens (by identity, not
  *    just by originating Entry).
  *  - Join or Split applied to a Non-Fungible token flow.
@@ -449,25 +454,21 @@ export function checkNFTJoinSplit(nodes: Node[], edges: Edge[]): ValidationError
 }
 
 /**
- * From a single output (source handle) carrying a token stream, at most ONE
- * edge can come out. Literal nodes (numberNode, booleanNode, addressNode,
- * stringNode) are excluded: their handles carry a plain value, not a token
- * stream, and can legitimately feed more than one destination (e.g. the same
- * amount or address reused in several places of the model). For every other
- * node type (Entry, Split, Join, Mint, Withdraw, If, Set) each source handle
- * represents a single token flow, which cannot be silently fanned out to
- * multiple branches without an explicit Split/Join node handling it.
+ * From a single output (source handle), at most ONE edge can come out,
+ * without exceptions. Literal nodes (numberNode, booleanNode, addressNode,
+ * stringNode) used to be excluded here, since their handles carry a plain
+ * value rather than a token stream — that exception has been removed on
+ * explicit request: every node type ("type blocks" included) must follow the
+ * same rule as every other ("flow blocks"), one edge per output. If the same
+ * value is needed in more than one place in the model, the literal node must
+ * be duplicated, not shared across multiple edges from a single handle.
  */
-const LITERAL_NODE_TYPES = ['numberNode', 'booleanNode', 'addressNode', 'stringNode'];
-
-export function checkSingleStreamPerOutput(nodes: Node[], edges: Edge[]): ValidationError[] {
+export function checkSingleEdgePerOutput(nodes: Node[], edges: Edge[]): ValidationError[] {
   const errors: ValidationError[] = [];
-  const nodeTypeOf = new Map(nodes.map((n) => [n.id, n.type]));
 
   const grouped = new Map<string, Edge[]>();
   edges.forEach((edge) => {
     if (!edge.sourceHandle) return;
-    if (LITERAL_NODE_TYPES.includes(nodeTypeOf.get(edge.source) || '')) return;
     const key = `${edge.source}::${edge.sourceHandle}`;
     const list = grouped.get(key) || [];
     list.push(edge);
@@ -480,7 +481,40 @@ export function checkSingleStreamPerOutput(nodes: Node[], edges: Edge[]): Valida
       const node = nodes.find((n) => n.id === sample.source);
       errors.push({
         id: `multi-stream-output-${sample.source}-${sample.sourceHandle}`,
-        message: `Node "${node?.data?.label || node?.type || sample.source}" (${sample.source}) feeds ${edgeList.length} token streams from a single output ("${sample.sourceHandle}"): each token output can carry only one stream.`,
+        message: `Node "${node?.data?.label || node?.type || sample.source}" (${sample.source}) feeds ${edgeList.length} edges from a single output ("${sample.sourceHandle}"): each output can feed only one edge.`,
+      });
+    }
+  });
+
+  return errors;
+}
+
+/**
+ * Symmetric to checkSingleEdgePerOutput, but on inputs: a single target
+ * handle can receive at most ONE incoming edge, without exceptions (applies
+ * to both "flow blocks" and "type blocks"). An input receiving two values/
+ * streams at once would have no unambiguous meaning: which of the two should
+ * actually reach the node?
+ */
+export function checkSingleEdgePerInput(nodes: Node[], edges: Edge[]): ValidationError[] {
+  const errors: ValidationError[] = [];
+
+  const grouped = new Map<string, Edge[]>();
+  edges.forEach((edge) => {
+    if (!edge.targetHandle) return;
+    const key = `${edge.target}::${edge.targetHandle}`;
+    const list = grouped.get(key) || [];
+    list.push(edge);
+    grouped.set(key, list);
+  });
+
+  grouped.forEach((edgeList) => {
+    if (edgeList.length > 1) {
+      const sample = edgeList[0];
+      const node = nodes.find((n) => n.id === sample.target);
+      errors.push({
+        id: `multi-edge-input-${sample.target}-${sample.targetHandle}`,
+        message: `Node "${node?.data?.label || node?.type || sample.target}" (${sample.target}) receives ${edgeList.length} edges into a single input ("${sample.targetHandle}"): each input can receive only one edge.`,
       });
     }
   });
@@ -496,7 +530,8 @@ export function runExtraValidation(nodes: Node[], edges: Edge[], variables: Vari
     ...checkDanglingReferences(nodes, variables),
     ...checkDuplicateNames(nodes, variables),
     ...checkEdgeTypeMismatch(edges),
-    ...checkSingleStreamPerOutput(nodes, edges),
+    ...checkSingleEdgePerOutput(nodes, edges),
+    ...checkSingleEdgePerInput(nodes, edges),
     ...checkJoinTokenMismatch(nodes, edges),
     ...checkNFTJoinSplit(nodes, edges),
   ];
