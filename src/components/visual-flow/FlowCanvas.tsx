@@ -121,7 +121,9 @@ const getNodeHandles = (node: Node, allVariables: Variable[], allPools: any[], a
     case 'entryNode':
       (data.tokenSelections || [{ id: 0 }]).forEach((s: any) => {
         handles.source.push(`output-stream-${s.id}`);
-        handles.target.push(`number-quantity-${s.id}`);
+        const tokenInfo = allTokens.find((t: any) => t.name === s.selectedToken);
+        const inputKind = tokenInfo?.type === 'Non-Fungible' ? 'id' : 'quantity';
+        handles.target.push(`number-${inputKind}-${s.id}`);
       });
       break;
     case 'splitNode':
@@ -1063,7 +1065,6 @@ const FlowCanvas = ({ projectName, initialNodes, initialEdges, initialVariables 
 
 
 export default FlowCanvas;
-
 
 
 
