@@ -1,6 +1,6 @@
 # TATAMI
 TATAMI (plaTform-Agnostic Token mAnagement &
-ModelIng) is a workflow-based visual modeling language specifically tailored for the design and implementation of tokenomics.
+ModelIng) is a workflow-based visual modeling language specifically tailored for the design and implementation of token economies.
 
 ## Requirements
 
